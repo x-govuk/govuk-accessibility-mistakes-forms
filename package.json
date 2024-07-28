@@ -1,0 +1,18 @@
+{
+  "name": "vickytnz-govuk-eleventy",
+  "version": "1.0.0",
+  "description": "Test of govuk eleventy",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@x-govuk/govuk-eleventy-plugin": "^6.4.0",
+    "@x-govuk/govuk-prototype-components": "^3.0.6",
+    "govuk-frontend": "^5.4.1",
+    "govuk-prototype-kit": "^13.16.2",
+    "markdown-it-govuk": "^0.4.0"
+  }
+}

@@ -1,0 +1,76 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Name" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+
+{% block content %}
+
+
+
+
+<!-- The version can be as different from the original version as you want, you have complete control over the code -->
+<span class="govuk-caption-xl">
+       Improved version
+      </span>
+      <h1 class="govuk-heading-xl">
+        Bank details
+      </h1>
+  <p>Last updated 1 January 2025.</p>
+<hr>
+
+<form class="form" action="#" method="post">
+
+      <h2 class="govuk-heading-m">Current account balance</h2>
+      <p>Your balance is £1,929.32</p>
+    <!--  <p>Last updated 1 January 2025.</p> -->
+
+<hr>
+
+
+      <h2 class="govuk-heading-m">Savings account balance</h2>
+
+      <p>Your balance is £532.43</p>
+<!--      <p>Last updated 1 January 2025.</p> -->
+      <p>This account has a 5% AER interest rate</p>
+
+<hr>
+      <h2 class="govuk-heading-m">Credit card balance</h2>
+
+
+      <p>Your balance is -£231.99</p>
+<!--      <p>Last updated 1 January 2025.</p> -->
+      <p>This account has a 9% AER interest rate</p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Go to explanation of improvements
+</button>
+
+
+      </form>
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,129 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Name" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% block content %}
+  {# Templates can include front matter data #}
+  {{ govukNotificationBanner({
+    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
+    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
+  }) if reviewed and reviewAgain }}
+
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+
+  <span class="govuk-caption-xl">
+          Improved version
+        </span>
+
+
+
+        <form class="form" action="#" method="post">
+
+
+
+
+
+    <h1 class="govuk-heading-l">
+     Gender of the goose
+    </h1>
+
+
+    <p>If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population.</p>
+      <p>A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.</p>
+
+
+
+
+
+
+
+
+    <div class="govuk-form-group">
+
+      <fieldset class="govuk-fieldset">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+          Do you know the gender of the goose?
+
+        </legend>
+
+
+        <div class="govuk-radios" data-module="govuk-radios">
+
+
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="higher-further-education" name="higher-further-education" type="radio" value="Yes">
+            <label class="govuk-label govuk-radios__label" for="higher-further-education">
+              Yes
+            </label>
+
+          </div>
+
+
+
+
+
+
+
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="higher-further-education-2" name="higher-further-education" type="radio" value="No">
+            <label class="govuk-label govuk-radios__label" for="higher-further-education-2">
+              No
+            </label>
+
+          </div>
+
+
+
+
+        </div>
+
+      </fieldset>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+
+          </form>
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

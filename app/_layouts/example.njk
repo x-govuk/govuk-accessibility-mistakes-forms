@@ -1,0 +1,243 @@
+{% extends "layouts/sub-navigation.njk" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    classes: "govuk-!-display-none-print",
+    items: breadcrumbItems
+  }) if showBreadcrumbs }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter-from-desktop">
+      {{ xGovukSubNavigation({
+        items: collections.ordered | eleventyNavigation(sectionKey or options.homeKey) | itemsFromNavigation(page.url, { pathPrefix: options.pathPrefix })
+      }) }}
+    </div>
+    <div class="govuk-grid-column-three-quarters-from-desktop">
+
+    {# overwrite appDocumentHeader #}
+    {#
+      {{ appDocumentHeader({
+        title: title,
+        description: description,
+        tags: tags
+      }) }}
+#}
+
+
+<header class="app-document-header">
+  <h1 class="app-document-header__title govuk-heading-xl">
+    {{ title | smart }}
+    {%- if tags | length > 0 -%}
+    <br>
+        {%- for tag in tags %}
+        <span class="govuk-tag govuk-tag--grey">
+             {{tag}}
+           </span>
+          {%- if not loop.last %}  {% endif %}
+        {%- endfor -%}
+      {%- endif -%}
+  </h1>
+
+  {% if description %}
+    <p class="app-document-header__description govuk-body-l">
+      {{ description | markdown("inline") }}
+    </p>
+  {% endif %}
+
+{#
+  {% if date or modified or authors or author or tags %}
+    <p class="app-document-header__metadata">
+      {%- if authors -%}
+        <span class="govuk-visually-hidden">Posted by</span>
+        {%- for author in authors -%}
+          {{- " and " if loop.last else (", " if not loop.first) -}}
+          {{- _authorLink(author) -}}
+        {%- endfor -%}
+        <span aria-hidden="true">&ensp;•&ensp;</span>
+      {%- elif author -%}
+        {{- _authorLink(author) -}}
+        <span aria-hidden="true">&ensp;•&ensp;</span>
+      {%- endif -%}
+      {%- if date -%}
+        <span class="govuk-visually-hidden">Posted on </span><time datetime="{{ date | date }}">{{ date | date("d LLLL y") }}</time>
+      {%- endif -%}
+      {%- if modified -%}
+        <span aria-hidden="true">&ensp;•&ensp;</span>Last updated <time datetime="{{ modified | date }}">{{ modified | date("d LLLL y") }}</time>
+      {%- endif -%}
+      {%- if tags | length > 0 -%}
+        <span aria-hidden="true">&ensp;•&ensp;</span>Tags:
+        {%- for tag in tags %}
+          <a href="/tags/{{ tag | slug }}" class="govuk-link">{{ tag }}</a>
+          {%- if not loop.last %}, {% endif %}
+        {%- endfor -%}
+      {%- endif -%}
+    </p>
+  {% endif %}
+
+#}
+</header>
+
+<div class="app-prose-scope">
+
+<ol class="govuk-list govuk-list--number">
+<li><a href="#typical-example" class="govuk-link">Typical example</a></li>
+<li><a href="#improved-version" class="govuk-link">Improved version</a></li>
+<li><a href="#links" class="govuk-link">Links</a></li>
+</ol>
+
+
+<h2 id="typical-example" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#typical-example"><span>Typical example</span></a></h2>
+
+<p class="govuk-body">{{mistake.description}}</p>
+
+
+ <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a class="app-example__new-window" href="{{mistake.link}}" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
+        </a>
+      </div>
+      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="{{mistake.link}}" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: {{mistake.height}};"></iframe>
+    </div>
+
+<!--    <div class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-html" role="tab" aria-controls="character-count-example-html" data-track="tab-html" aria-expanded="false">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-nunjucks" role="tab" aria-controls="character-count-example-nunjucks" data-track="tab-nunjucks" aria-expanded="false">Nunjucks</a></li>
+    </div>
+-->
+
+<!--
+<div class="app-example app-example__toolbar" >
+
+
+<p> Test</p>
+</div>
+
+
+-->
+{% if mistake.code %}
+<div class="app-example app-example__toolbar">
+  <details class="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Show code
+  </span>
+</summary>
+<div class="govuk-details__text">
+
+
+
+
+<pre class="x-govuk-code x-govuk-code--block ">
+<code style="white-space : pre-wrap !important;">
+  {{mistake.code  | escape  }}
+
+</code>
+</pre>
+
+</div>
+</details>
+
+</div>
+{% endif %}
+
+</div>
+
+
+
+<h3 id="why-this-causes-barriers" class="govuk-heading-m"><a class="app-link--heading govuk-link" href="#why-this-causes-barriers"><span>Why this causes barriers for users</span></a></h3>
+
+<p class="govuk-body">{{mistake.reason}}</p>
+
+<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version</span></a></h2>
+
+
+ <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a class="app-example__new-window" href="{{improvement.link}}" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
+        </a>
+      </div>
+      <iframe title="Improved example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="{{improvement.link}}" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; height: {{improvement.height}};"></iframe>
+    </div>
+
+<!--    <div class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-html" role="tab" aria-controls="character-count-example-html" data-track="tab-html" aria-expanded="false">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-nunjucks" role="tab" aria-controls="character-count-example-nunjucks" data-track="tab-nunjucks" aria-expanded="false">Nunjucks</a></li>
+    </div>
+-->
+
+<!--
+<div class="app-example app-example__toolbar" >
+
+
+<p> Test</p>
+</div>
+
+
+-->
+
+{% if improvement.code %}
+<div class="app-example app-example__toolbar">
+  <details class="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Show code
+  </span>
+</summary>
+<div class="govuk-details__text">
+
+
+
+
+<pre class="x-govuk-code x-govuk-code--block ">
+<code style="white-space : pre-wrap !important;">
+  {{improvement.code  | escape  }}
+
+</code>
+</pre>
+
+</div>
+</details>
+
+</div>
+{% endif %}
+
+</div>
+
+
+
+<h3 id="why-this-is-better" class="govuk-heading-m"><a class="app-link--heading govuk-link" href="#why-this-is-better"><span>Why this is better</span></a></h3>
+
+
+<p class="govuk-body">{{improvement.reason}}</p>
+
+
+
+{% if links %}
+
+<h2 id="links" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#links"><span>Links</span></a></h2>
+
+<ul class="govuk-list govuk-list--bullet">
+
+
+{% for link in links %}
+<li><a href="{{link.href}}" class="govuk-link">{{link.text}}</a></li>
+
+{% endfor %}
+</ul>
+{% else %}
+<p class='govuk-body'>No links given.</p>
+{% endif %}
+</div>
+
+      {{ appProseScope(content) if content }}
+
+      {% include "layouts/shared/related.njk" %}
+    </div>
+  </div>
+{% endblock %}

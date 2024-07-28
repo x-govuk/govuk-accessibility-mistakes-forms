@@ -1,0 +1,82 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Examples of complex information" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% block content %}
+
+
+  <span class="govuk-caption-xl">
+        Improved version
+        </span>
+
+
+
+
+
+
+                            </span>
+                            <form class="form" action="/content/accessible-explanation" method="post">
+
+
+
+
+
+
+
+
+                                  <h1 class="govuk-heading-l">Examples of complex information</h1>
+
+
+
+
+
+                            <p>This information is here.</p>
+
+                            <h2 class="govuk-heading-m">Writing well for the web</h2>
+                            <p>This is the content for Writing well for the web.</p>
+
+                              <h2 class="govuk-heading-m">Writing well for specialists</h2>
+                              <p>This is the content for Writing well for specialists.</p>
+
+                                <h2 class="govuk-heading-m">Know your audience</h2>
+                                <p>This is the content for Know your audience.</p>
+
+                                  <h2 class="govuk-heading-m">How people read</h2>
+                                  <p>This is the content for How people read.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </form>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
