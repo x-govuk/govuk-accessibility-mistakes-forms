@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Test of govuk eleventy",
   "main": "eleventy.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "license": "MIT",
 "scripts": {
   "prebuild": "rimraf _site",
