@@ -1,0 +1,104 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Name" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% block content %}
+  {# Templates can include front matter data #}
+  {{ govukNotificationBanner({
+    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
+    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
+  }) if reviewed and reviewAgain }}
+
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+
+  <span class="govuk-caption-xl">
+          Improved version
+        </span>
+
+
+
+        <form class="form" action="#" method="post">
+
+
+
+
+
+
+          <h1 class="govuk-heading-l">
+            5 addresses found
+          </h1>
+    <p class="govuk-body">Search results for NE1 1LE. <a class="govuk-link" href="#">Search again</a>.</p>
+
+
+
+
+
+    <div class="govuk-form-group">
+
+    <fieldset class="govuk-fieldset">
+ <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+   <h2 class="govuk-fieldset__heading">
+     Choose address
+   </h2>
+ </legend>
+
+        <div class="govuk-radios" data-module="govuk-radios">
+
+
+
+
+
+
+{% for i in range(1, 6) -%}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="address-{{i}}" name="address" type="radio" value="{{i}} Chancery lane">
+            <label class="govuk-label govuk-radios__label" for="higher-further-education">
+            {{i}} Chancery Lane
+            </label>
+
+          </div>
+
+
+{% endfor %}
+
+
+
+
+
+
+        </div>
+
+      </fieldset>
+
+    </div>
+
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+    <p class="govuk-body"><a class="govuk-link" href="#">Enter address manually</a></p>
+
+          </form>
+
+
+  {{ appProseScope(content) if content }}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

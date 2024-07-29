@@ -3,8 +3,8 @@ layout: example
 title: Tabs used for complex content
 description: Using tabs in situations where users need to compare or absorb more information.
 tags: "Design"
-mistake:
-  description: This example can happen when showing information about a user that they need to compalre.
+mistake:  
+- description: This example can happen when showing information about a user that they need to compalre.
   link: /examples/tabs/mistake
   height: 500px
   reason: Tabs, like accordions, can be a symptom of unstructured content design. It also does not act as a tab in mobile view so is a unequal experience.
@@ -31,7 +31,7 @@ mistake:
           </tbody>
         </table>'
 improvement:
-  link: /examples/tabs/improved
+- link: improved
   height: 650px
   reason: Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
   code: '<main class="govuk-main-wrapper" id="main-content">

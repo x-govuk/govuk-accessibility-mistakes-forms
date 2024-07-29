@@ -105,25 +105,28 @@
 <div class="app-prose-scope">
 
 <ol class="govuk-list govuk-list--number">
-<li><a href="#typical-example" class="govuk-link">Typical example</a></li>
-<li><a href="#improved-version" class="govuk-link">Improved version</a></li>
+<li><a href="#typical-example" class="govuk-link">Typical examples that cause barriers</a></li>
+<li><a href="#improved-version" class="govuk-link">Improved versions</a></li>
 <li><a href="#links" class="govuk-link">Links</a></li>
 </ol>
 
 
-<h2 id="typical-example" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#typical-example"><span>Typical example</span></a></h2>
 
+
+
+<h2 id="typical-example" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#typical-example"><span>Typical examples that cause barriers </span></a></h2>
 <p class="govuk-body">This example can happen when showing information about a user that they need to check.</p>
 
+<h3 id="example-1" class="govuk-heading-m">Example 1</h3>
 
  <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
     <div class="app-example app-example--tabs">
       <div class="app-example__toolbar">
-        <a class="app-example__new-window" href="/examples/complex-question/mistake" target="_blank">
+        <a class="app-example__new-window" href="mistake" target="_blank">
           Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
         </a>
       </div>
-      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/examples/complex-question/mistake" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: 400px;"></iframe>
+      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="mistake" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: 400px;"></iframe>
     </div>
 
 <!--    <div class="app-tabs" role="tablist">
@@ -155,177 +158,9 @@
 
 <pre class="x-govuk-code x-govuk-code--block ">
 <code style="white-space : pre-wrap !important;">
-  &lt;form class=&quot;form&quot; action=&quot;/complex-question/original-explanation&quot; method=&quot;post&quot;&gt;
-
-
-
-
-
-&lt;h1 class=&quot;govuk-heading-l&quot;&gt; Do you know the gender of the goose? &lt;/h1&gt;
+  &lt;form class=&quot;form&quot; action=&quot;/complex-question/original-explanation&quot; method=&quot;post&quot;&gt; &lt;h1 class=&quot;govuk-heading-l&quot;&gt; Do you know the gender of the goose? &lt;/h1&gt;
 &lt;!--       &lt;p&gt;You can get help to figure out what type of goose it is with &lt;a href=&quot;https://www.countryfile.com/wildlife/how-to-identify/guide-to-britains-geese-how-to-identify-and-where-to-see&quot;&gt;guidance from BBC Countryfile.&lt;/a&gt;&lt;/P&gt; --&gt;
-&lt;p&gt;If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population.&lt;/p&gt; &lt;p&gt;A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.&lt;/p&gt;
-
-
-
-
-
-
-&lt;div class=&quot;govuk-form-group&quot;&gt;
-&lt;fieldset class=&quot;govuk-fieldset&quot;&gt;
-
-&lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt;
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;Yes&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education&quot;&gt; Yes &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education-2&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;No&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education-2&quot;&gt; No &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;/fieldset&gt;
-&lt;/div&gt;
-
-
-
-
-&lt;!--
-
-
-
-
-&lt;div class=&quot;govuk-form-group&quot;&gt;
-&lt;fieldset class=&quot;govuk-fieldset&quot;&gt;
-
-&lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt;
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;White-fronted goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types&quot;&gt; White-fronted goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-2&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-2&quot;&gt; Barnacle goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-3&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Brent goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-3&quot;&gt; Brent goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-4&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-4&quot;&gt; Barnacle goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-5&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Greylag goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-5&quot;&gt; Greylag goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-6&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Canada goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-6&quot;&gt; Canada goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-7&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Bean goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-7&quot;&gt; Bean goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-8&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Pink-footed goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-8&quot;&gt; Pink-footed goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-9&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Egyptian goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-9&quot;&gt; Egyptian goose &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-
-&lt;div class=&quot;govuk-radios__divider&quot;&gt;or&lt;/div&gt;
-
-
-
-
-
-
-&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-11&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Not sure&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-11&quot;&gt; Not sure &lt;/label&gt;
-&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-&lt;/fieldset&gt;
-&lt;/div&gt;
-
-
---&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt; Continue &lt;/button&gt;
-
-&lt;/form&gt;
+&lt;p&gt;If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population.&lt;/p&gt; &lt;p&gt;A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.&lt;/p&gt; &lt;div class=&quot;govuk-form-group&quot;&gt; &lt;fieldset class=&quot;govuk-fieldset&quot;&gt; &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;Yes&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education&quot;&gt; Yes &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education-2&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;No&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education-2&quot;&gt; No &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/fieldset&gt; &lt;/div&gt; &lt;!-- &lt;div class=&quot;govuk-form-group&quot;&gt; &lt;fieldset class=&quot;govuk-fieldset&quot;&gt; &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;White-fronted goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types&quot;&gt; White-fronted goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-2&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-2&quot;&gt; Barnacle goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-3&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Brent goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-3&quot;&gt; Brent goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-4&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-4&quot;&gt; Barnacle goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-5&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Greylag goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-5&quot;&gt; Greylag goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-6&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Canada goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-6&quot;&gt; Canada goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-7&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Bean goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-7&quot;&gt; Bean goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-8&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Pink-footed goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-8&quot;&gt; Pink-footed goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-9&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Egyptian goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-9&quot;&gt; Egyptian goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__divider&quot;&gt;or&lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-11&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Not sure&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-11&quot;&gt; Not sure &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/fieldset&gt; &lt;/div&gt; --&gt; &lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt; Continue &lt;/button&gt; &lt;/form&gt;
 
 </code>
 </pre>
@@ -339,21 +174,20 @@
 
 
 
-<h3 id="why-this-causes-barriers" class="govuk-heading-m"><a class="app-link--heading govuk-link" href="#why-this-causes-barriers"><span>Why this causes barriers for users</span></a></h3>
-
 <p class="govuk-body">A complex question must have a header, information and then the question - without this it is difficult for screen readers to show that there is context or for people with memory issues to remember what is being asked.</p>
 
-<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version</span></a></h2>
+<p class="govuk-body">This example can happen when showing information about a user that they need to check.</p>
 
+<h3 id="example-2" class="govuk-heading-m">Example 2</h3>
 
  <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
     <div class="app-example app-example--tabs">
       <div class="app-example__toolbar">
-        <a class="app-example__new-window" href="/examples/complex-question/improved" target="_blank">
+        <a class="app-example__new-window" href="mistake-2" target="_blank">
           Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
         </a>
       </div>
-      <iframe title="Improved example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="/examples/complex-question/improved" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; height: 500px;"></iframe>
+      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="mistake-2" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: 600px;"></iframe>
     </div>
 
 <!--    <div class="app-tabs" role="tablist">
@@ -372,6 +206,44 @@
 
 -->
 
+</div>
+
+
+
+<p class="govuk-body">This example puts links between the fieldset and the radio buttons, meaning screen reader users are unlikely to get the link announced. It also causes issues for showing error messages.</p>
+
+
+<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version</span></a></h2>
+
+
+
+<h3 id="example-1" class="govuk-heading-m">Improvement 1</h3>
+
+ <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a class="app-example__new-window" href="improved" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
+        </a>
+      </div>
+      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="improved" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: 500px;"></iframe>
+    </div>
+
+<!--    <div class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-html" role="tab" aria-controls="character-count-example-html" data-track="tab-html" aria-expanded="false">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-nunjucks" role="tab" aria-controls="character-count-example-nunjucks" data-track="tab-nunjucks" aria-expanded="false">Nunjucks</a></li>
+    </div>
+-->
+
+<!--
+<div class="app-example app-example__toolbar" >
+
+
+<p> Test</p>
+</div>
+
+
+-->
 <div class="app-example app-example__toolbar">
   <details class="govuk-details">
 <summary class="govuk-details__summary">
@@ -459,11 +331,41 @@ Do you know the gender of the goose?
 </div>
 
 
-
-<h3 id="why-this-is-better" class="govuk-heading-m"><a class="app-link--heading govuk-link" href="#why-this-is-better"><span>Why this is better</span></a></h3>
-
-
 <p class="govuk-body">Structuring the page to have header, details and question helps screen readers, audio announcers and general ease of memory. Links will also be announced by a screen reader before the question.</p>
+
+<h3 id="example-2" class="govuk-heading-m">Improvement 2</h3>
+
+ <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
+    <div class="app-example app-example--tabs">
+      <div class="app-example__toolbar">
+        <a class="app-example__new-window" href="improved-2" target="_blank">
+          Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
+        </a>
+      </div>
+      <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="improved-2" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: 600px;"></iframe>
+    </div>
+
+<!--    <div class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-html" role="tab" aria-controls="character-count-example-html" data-track="tab-html" aria-expanded="false">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#character-count-example-nunjucks" role="tab" aria-controls="character-count-example-nunjucks" data-track="tab-nunjucks" aria-expanded="false">Nunjucks</a></li>
+    </div>
+-->
+
+<!--
+<div class="app-example app-example__toolbar" >
+
+
+<p> Test</p>
+</div>
+
+
+-->
+
+</div>
+
+
+<p class="govuk-body">This example reintroduced a clear fieldset header for the radio buttons, and also changes the existing fields to separate searching for an existing result with choosing one based on the previous information.</p>
+
 
 
 

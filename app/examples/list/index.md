@@ -4,7 +4,7 @@ title: Coding lists as tables
 description: Using tables instead of definition lists creates noise for screen reader users.
 tags: "Code"
 mistake:
-  description: This example can happen when showing information about a user that they need to check.
+- description: This example can happen when showing information about a user that they need to check.
   link: /examples/list/mistake
   height: 700px
   reason: This is coded as a table rather than a definition list. Table are far more 'noisy' for screen reader users as they read out row and columns, and the table caption doubling as a page title may also confuse sighted screen reader users.
