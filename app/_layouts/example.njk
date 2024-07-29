@@ -161,7 +161,7 @@
 {% endfor %}
 
 
-<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version</span></a></h2>
+<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version{%- if improvement | length > 1 -%}s{% endif %}</span></a></h2>
 
 
 {% for i in improvement %}
