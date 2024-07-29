@@ -1,0 +1,73 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Name" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% block content %}
+  {# Templates can include front matter data #}
+  {{ govukNotificationBanner({
+    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
+    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
+  }) if reviewed and reviewAgain }}
+
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+
+  <span class="govuk-caption-xl">
+          Original version
+        </span>
+
+
+
+        <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="example">
+        What is your Self Assessment Unique Taxpayer Reference (UTR)?
+        </label>
+      </h1>
+      <div id="example-hint" class="govuk-hint">
+        Your UTR can be 10 or 13 digits long. You can find it.
+         <ul>
+         <li>in your Personal Tax Account</li>
+         <li>the HMRC app</li>
+     <li>on tax returns and other documents from HMRC</li>
+         </ul>
+    It might be called ‘reference’, ‘UTR’ or ‘official use’. <a href="https://www.gov.uk/find-utr-number">How to find your UTR</a>
+      </div>
+      <input class="govuk-input" id="example" name="example" type="text" aria-describedby="example-hint">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+
+          </form>
+
+
+  {{ appProseScope(content) if content }}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

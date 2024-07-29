@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Complex question design
+title: Form fields with missing legends 
 description: When a question is too complex to allow for a 1 paragraph description, other approaches are required.
 tags: "Design"
 mistake:
