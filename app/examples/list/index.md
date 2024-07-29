@@ -30,7 +30,7 @@ mistake:
           </tbody>
         </table>'
 improvement:
-  link: /examples/list/improved
+- link: /examples/list/improved
   height: 600px
   reason: Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
   code: '<main class="govuk-main-wrapper" id="main-content">
