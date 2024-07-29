@@ -1,0 +1,61 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Examples of complex information" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% block content %}
+
+
+  <span class="govuk-caption-xl">
+          Original version
+        </span>
+
+
+        <h1 class="govuk-heading-l">
+      Can you apply?
+
+              </h1>
+        <form class="form" action="/content/original-explanation" method="post">
+
+
+<p class="govuk-body">
+You can only apply if you are:
+</P>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+  <li>
+    constructing, altering, repairing, extending, demolishing or dismantling buildings or structures (whether permanent or not), including offshore installation services
+  </li>
+  <li>
+    constructing, altering, repairing, extending, demolishing of any works forming, or planned to form, part of the land, including (in particular) walls, roadworks, power lines, electronic communications equipment, aircraft runways, railways, inland waterways, docks and harbours
+  </li>
+  <li>
+    pipelines, reservoirs, water mains, wells, sewers, industrial plant and installations for purposes of land drainage, coast protection or defence
+  </li>
+  <li>
+    installing heating, lighting, air-conditioning, ventilation, power supply, drainage, sanitation, water supply or fire protection systems in any building or structure
+</ul>
+
+
+<p class="govuk-body">
+If you are not eligible you can <a href="#">return to GOV.UK</a>.
+</P>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+              </form>
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
