@@ -73,7 +73,8 @@ module.exports = function(eleventyConfig) {
       input: 'app',
       // Use layouts from the plugin
       //layouts: '../node_modules/@x-govuk/govuk-eleventy-plugin/layouts',
-      layouts: "_layouts"
+      layouts: "_layouts" /* ,
+      includes: '_components' */
     }
   }
 };
