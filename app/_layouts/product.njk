@@ -5,9 +5,9 @@
   <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-full">
-        <h2 class="govuk-heading-l govuk-!-font-size-27">
+<!--        <h2 class="govuk-heading-l govuk-!-font-size-27">
           {{ sections.title or app.sections.title or "Examples" }}
-        </h2>
+        </h2> -->
       </div>
       {% for item in collections.ordered | eleventyNavigation(sectionKey or options.homeKey) %}
         <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">

@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8">
-    <title>Tabs used for complex content - Accessible form design</title>
+    <title>Avoid tabs for complex content - Accessible form design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/assets/govuk.css">
 
 <link rel="alternate" type="application/atom+xml" href="feed.xml" >
-  <meta property="og:title" content="Tabs used for complex content">
+  <meta property="og:title" content="Avoid tabs for complex content">
 <meta property="og:description" name="description" content="Using tabs in situations where users need to compare or absorb more information.">
     <meta property="og:image" content="https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png">
   </head>
@@ -62,22 +62,22 @@
   <h2 class="govuk-visually-hidden" id="sub-navigation-heading">Pages in this section</h2>
   <ul class="x-govuk-sub-navigation__section">
     <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/accordions/">Accordions hiding information</a>
-    </li>
-    <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/list/">Coding lists as tables</a>
-    </li>
-    <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/form-fields-hints-links/">Form fields hint text with links or bullets</a>
-    </li>
-    <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/complex-question/">Form fields with missing legends</a>
-    </li>
-    <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/information-pages/">Information pages written as questions</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/accordions/">Accordions create extra work</a>
     </li>
     <li class="x-govuk-sub-navigation__section-item x-govuk-sub-navigation__section-item--current">
-      <a class="x-govuk-sub-navigation__link" href="/examples/tabs/" aria-current="true">Tabs used for complex content</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/tabs/" aria-current="true">Avoid tabs for complex content</a>
+    </li>
+    <li class="x-govuk-sub-navigation__section-item">
+      <a class="x-govuk-sub-navigation__link" href="/examples/list/">Do not code lists as tables</a>
+    </li>
+    <li class="x-govuk-sub-navigation__section-item">
+      <a class="x-govuk-sub-navigation__link" href="/examples/form-fields-hints-links/">Links in hint text confuse screen readers</a>
+    </li>
+    <li class="x-govuk-sub-navigation__section-item">
+      <a class="x-govuk-sub-navigation__link" href="/examples/complex-question/">Make sure that answers connected to a question</a>
+    </li>
+    <li class="x-govuk-sub-navigation__section-item">
+      <a class="x-govuk-sub-navigation__link" href="/examples/information-pages/">On text pages, avoid headings that are questions</a>
     </li>
   </ul>
 </nav>
@@ -91,7 +91,7 @@
 
 <header class="app-document-header">
   <h1 class="app-document-header__title govuk-heading-xl">
-    Tabs used for complex content<br>        <span class="govuk-tag govuk-tag--grey">
+    Avoid tabs for complex content<br>        <span class="govuk-tag govuk-tag--grey">
              Design
            </span></h1>
 
@@ -158,9 +158,7 @@
 
 <pre class="x-govuk-code x-govuk-code--block ">
 <code style="white-space : pre-wrap !important;">
-  < table class = "govuk-table" > < caption class = "govuk-table__caption govuk-table__caption--l" > Check previous details < /caption> <tbody class="govuk-table__body"> <tr class="govuk-table__row"> <th scope="row" class="govuk-table__header">Name</th > < td class = "govuk-table__cell" > Sarah Philips < /td> </tr > < tr class = "govuk-table__row" > < th scope = "row"
-class = "govuk-table__header" > Date of birth < /th> <td class="govuk-table__cell">5 January 1978</td > < /tr> <tr class="govuk-table__row"> <th scope="row" class="govuk-table__header">Address</th > < td class = "govuk-table__cell" > 72 Guild Street < br > London < br > SE23 6 FH < /td> </tr > < tr class = "govuk-table__row" > < th scope = "row"
-class = "govuk-table__header" > Contact details < /th> <td class="govuk-table__cell"><p class="govuk-body">07700 900457</p > < p class = "govuk-body" > sarah.phillips @example.com < /p></td > < /tr> </tbody > < /table>
+  &lt;table class=&quot;govuk-table&quot;&gt; &lt;caption class=&quot;govuk-table__caption govuk-table__caption--l&quot;&gt;Check previous details&lt;/caption&gt; &lt;tbody class=&quot;govuk-table__body&quot;&gt; &lt;tr class=&quot;govuk-table__row&quot;&gt; &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;Name&lt;/th&gt; &lt;td class=&quot;govuk-table__cell&quot;&gt;Sarah Philips&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;govuk-table__row&quot;&gt; &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;Date of birth&lt;/th&gt; &lt;td class=&quot;govuk-table__cell&quot;&gt;5 January 1978&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;govuk-table__row&quot;&gt; &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;Address&lt;/th&gt; &lt;td class=&quot;govuk-table__cell&quot;&gt;72 Guild Street&lt;br&gt;London&lt;br&gt;SE23 6FH&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;govuk-table__row&quot;&gt; &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;Contact details&lt;/th&gt; &lt;td class=&quot;govuk-table__cell&quot;&gt;&lt;p class=&quot;govuk-body&quot;&gt;07700 900457&lt;/p&gt;&lt;p class=&quot;govuk-body&quot;&gt;sarah.phillips@example.com&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;
 
 </code>
 </pre>
@@ -222,58 +220,40 @@ class = "govuk-table__header" > Contact details < /th> <td class="govuk-table__c
 
 <pre class="x-govuk-code x-govuk-code--block ">
 <code style="white-space : pre-wrap !important;">
-  < main class = "govuk-main-wrapper"
-id = "main-content" >
+  &lt;main class=&quot;govuk-main-wrapper&quot; id=&quot;main-content&quot;&gt;
 
 
 
 
-  <
-  span class = "govuk-caption-xl" > Improved version < /span>
+&lt;span class=&quot;govuk-caption-xl&quot;&gt; Improved version &lt;/span&gt;
 
 
-  <
-  dl class = "govuk-summary-list" >
+&lt;dl class=&quot;govuk-summary-list&quot;&gt;
 
-  <
-  div class = "govuk-summary-list__row" > < dt class = "govuk-summary-list__key" > Name < /dt> <dd class="govuk-summary-list__value"> Sarah Philips </dd >
-  <
-  /div>
+&lt;div class=&quot;govuk-summary-list__row&quot;&gt; &lt;dt class=&quot;govuk-summary-list__key&quot;&gt; Name &lt;/dt&gt; &lt;dd class=&quot;govuk-summary-list__value&quot;&gt; Sarah Philips &lt;/dd&gt;
+&lt;/div&gt;
 
 
-  <
-  div class = "govuk-summary-list__row" > < dt class = "govuk-summary-list__key" > Date of birth < /dt> <dd class="govuk-summary-list__value"> 5 January 1978 </dd >
-  <
-  /div>
+&lt;div class=&quot;govuk-summary-list__row&quot;&gt; &lt;dt class=&quot;govuk-summary-list__key&quot;&gt; Date of birth &lt;/dt&gt; &lt;dd class=&quot;govuk-summary-list__value&quot;&gt; 5 January 1978 &lt;/dd&gt;
+&lt;/div&gt;
 
 
-  <
-  div class = "govuk-summary-list__row" > < dt class = "govuk-summary-list__key" > Address < /dt> <dd class="govuk-summary-list__value"> 72 Guild Street<br>London<br>SE23 6FH </dd >
-  <
-  /div>
+&lt;div class=&quot;govuk-summary-list__row&quot;&gt; &lt;dt class=&quot;govuk-summary-list__key&quot;&gt; Address &lt;/dt&gt; &lt;dd class=&quot;govuk-summary-list__value&quot;&gt; 72 Guild Street&lt;br&gt;London&lt;br&gt;SE23 6FH &lt;/dd&gt;
+&lt;/div&gt;
 
 
-  <
-  div class = "govuk-summary-list__row" > < dt class = "govuk-summary-list__key" > Contact details < /dt> <dd class="govuk-summary-list__value"> <p class="govuk-body">07700 900457</p > < p class = "govuk-body" > sarah.phillips @example.com < /p> </dd >
-  <
-  /div>
+&lt;div class=&quot;govuk-summary-list__row&quot;&gt; &lt;dt class=&quot;govuk-summary-list__key&quot;&gt; Contact details &lt;/dt&gt; &lt;dd class=&quot;govuk-summary-list__value&quot;&gt; &lt;p class=&quot;govuk-body&quot;&gt;07700 900457&lt;/p&gt;&lt;p class=&quot;govuk-body&quot;&gt;sarah.phillips@example.com&lt;/p&gt; &lt;/dd&gt;
+&lt;/div&gt;
 
-  <
-  /dl> <
-  div class = "govuk-form-group" >
-  <
-  fieldset class = "govuk-fieldset" > < legend class = "govuk-fieldset__legend govuk-fieldset__legend--m" > Are these details correct ? < /legend> <div class="govuk-radios" data-module="govuk-radios"> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="details" name="details" type="radio" value="yes"> <label class="govuk-label govuk-radios__label" for="details"> Yes </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="details-2" name="details" type="radio" value="no"> <label class="govuk-label govuk-radios__label" for="details-2"> No </label > < /div> </div > < /fieldset> <
-  /div>
+&lt;/dl&gt;
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+&lt;fieldset class=&quot;govuk-fieldset&quot;&gt; &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;&gt; Are these details correct? &lt;/legend&gt; &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;details&quot; name=&quot;details&quot; type=&quot;radio&quot; value=&quot;yes&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;details&quot;&gt; Yes &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;details-2&quot; name=&quot;details&quot; type=&quot;radio&quot; value=&quot;no&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;details-2&quot;&gt; No &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/fieldset&gt;
+&lt;/div&gt;
 
-  <
-  button type = "submit"
-class = "govuk-button"
-data - module = "govuk-button" > Save and
-continue < /button>
+&lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt; Save and continue &lt;/button&gt;
 
 
-  <
-  /main>
+&lt;/main&gt;
 
 </code>
 </pre>
@@ -298,6 +278,8 @@ continue < /button>
 
 
 <li><a href="https://design-system.service.gov.uk/components/tabs/#when-not-to-use-this-component" class="govuk-link">Tab (when not to use this content) in the GOV.UK Design System</a></li>
+
+<li><a href="https://amyhupe.co.uk/articles/dont-be-afraid-of-the-big-long-page/" class="govuk-link">Don't be afraid of the big long page by Amy Hupe and Caroline Jarrett</a></li>
 
 <li><a href="https://design-system.service.gov.uk/components/summary-list/" class="govuk-link">Definition lists information in the GOV.UK Design system</a></li>
 

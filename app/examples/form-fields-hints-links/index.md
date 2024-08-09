@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Form fields hint text with links or bullets
+title: Links in hint text confuse screen readers 
 description: Fields that hack the GOV.UK pattern for hint text (which should be a paragraph of text only)
 tags: "Code"
 mistake:

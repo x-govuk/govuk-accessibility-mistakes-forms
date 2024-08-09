@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8">
-    <title>Form fields with missing legends - Accessible form design</title>
+    <title>Make sure that answers connected to a question - Accessible form design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/assets/govuk.css">
 
 <link rel="alternate" type="application/atom+xml" href="feed.xml" >
-  <meta property="og:title" content="Form fields with missing legends">
+  <meta property="og:title" content="Make sure that answers connected to a question">
 <meta property="og:description" name="description" content="When a question is too complex to allow for a 1 paragraph description, other approaches are required.">
     <meta property="og:image" content="https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png">
   </head>
@@ -62,22 +62,22 @@
   <h2 class="govuk-visually-hidden" id="sub-navigation-heading">Pages in this section</h2>
   <ul class="x-govuk-sub-navigation__section">
     <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/accordions/">Accordions hiding information</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/accordions/">Accordions create extra work</a>
     </li>
     <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/list/">Coding lists as tables</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/tabs/">Avoid tabs for complex content</a>
     </li>
     <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/form-fields-hints-links/">Form fields hint text with links or bullets</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/list/">Do not code lists as tables</a>
+    </li>
+    <li class="x-govuk-sub-navigation__section-item">
+      <a class="x-govuk-sub-navigation__link" href="/examples/form-fields-hints-links/">Links in hint text confuse screen readers</a>
     </li>
     <li class="x-govuk-sub-navigation__section-item x-govuk-sub-navigation__section-item--current">
-      <a class="x-govuk-sub-navigation__link" href="/examples/complex-question/" aria-current="true">Form fields with missing legends</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/complex-question/" aria-current="true">Make sure that answers connected to a question</a>
     </li>
     <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/information-pages/">Information pages written as questions</a>
-    </li>
-    <li class="x-govuk-sub-navigation__section-item">
-      <a class="x-govuk-sub-navigation__link" href="/examples/tabs/">Tabs used for complex content</a>
+      <a class="x-govuk-sub-navigation__link" href="/examples/information-pages/">On text pages, avoid headings that are questions</a>
     </li>
   </ul>
 </nav>
@@ -91,7 +91,7 @@
 
 <header class="app-document-header">
   <h1 class="app-document-header__title govuk-heading-xl">
-    Form fields with missing legends<br>        <span class="govuk-tag govuk-tag--grey">
+    Make sure that answers connected to a question<br>        <span class="govuk-tag govuk-tag--grey">
              Design
            </span></h1>
 
@@ -158,28 +158,9 @@
 
 <pre class="x-govuk-code x-govuk-code--block ">
 <code style="white-space : pre-wrap !important;">
-  < form class = "form"
-action = "/complex-question/original-explanation"
-method = "post" > < h1 class = "govuk-heading-l" > Do you know the gender of the goose ? < /h1> <
-  !-- < p > You can get help to figure out what type of goose it is with < a href = "https://www.countryfile.com/wildlife/how-to-identify/guide-to-britains-geese-how-to-identify-and-where-to-see" > guidance from BBC Countryfile. < /a></P > -- >
-  <
-  p > If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population. < /p> <p>A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.</p > < div class = "govuk-form-group" > < fieldset class = "govuk-fieldset" > < div class = "govuk-radios"
-data - module = "govuk-radios" > < div class = "govuk-radios__item" > < input class = "govuk-radios__input"
-id = "higher-further-education"
-name = "higher-further-education"
-type = "radio"
-value = "Yes" > < label class = "govuk-label govuk-radios__label"
-for = "higher-further-education" > Yes < /label> </div > < div class = "govuk-radios__item" > < input class = "govuk-radios__input"
-id = "higher-further-education-2"
-name = "higher-further-education"
-type = "radio"
-value = "No" > < label class = "govuk-label govuk-radios__label"
-for = "higher-further-education-2" > No < /label> </div > < /div> </fieldset > < /div> <!-- <div class="govuk-form-group"> <fieldset class="govuk-fieldset"> <div class="govuk-radios" data-module="govuk-radios"> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types" name="goose0types" type="radio" value="White-fronted goose"> <label class="govuk-label govuk-radios__label" for="goose0types"> White-fronted goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-2" name="goose0types" type="radio" value="Barnacle goose"> <label class="govuk-label govuk-radios__label" for="goose0types-2"> Barnacle goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-3" name="goose0types" type="radio" value="Brent goose"> <label class="govuk-label govuk-radios__label" for="goose0types-3"> Brent goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-4" name="goose0types" type="radio" value="Barnacle goose"> <label class="govuk-label govuk-radios__label" for="goose0types-4"> Barnacle goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-5" name="goose0types" type="radio" value="Greylag goose"> <label class="govuk-label govuk-radios__label" for="goose0types-5"> Greylag goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-6" name="goose0types" type="radio" value="Canada goose"> <label class="govuk-label govuk-radios__label" for="goose0types-6"> Canada goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-7" name="goose0types" type="radio" value="Bean goose"> <label class="govuk-label govuk-radios__label" for="goose0types-7"> Bean goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-8" name="goose0types" type="radio" value="Pink-footed goose"> <label class="govuk-label govuk-radios__label" for="goose0types-8"> Pink-footed goose </label > < /div> <div class="govuk-radios__item"> <input class="govuk-radios__input" id="goose0types-9" name="goose0types" type="radio" value="Egyptian goose"> <label class="govuk-label govuk-radios__label" for="goose0types-9"> Egyptian goose </label > < /div> <div class="govuk-radios__divider">or</div > < div class = "govuk-radios__item" > < input class = "govuk-radios__input"
-id = "goose0types-11"
-name = "goose0types"
-type = "radio"
-value = "Not sure" > < label class = "govuk-label govuk-radios__label"
-for = "goose0types-11" > Not sure < /label> </div > < /div> </fieldset > < /div> --> <button type="submit" class="govuk-button" data-module="govuk-button"> Continue </button > < /form>
+  &lt;form class=&quot;form&quot; action=&quot;/complex-question/original-explanation&quot; method=&quot;post&quot;&gt; &lt;h1 class=&quot;govuk-heading-l&quot;&gt; Do you know the gender of the goose? &lt;/h1&gt;
+&lt;!--       &lt;p&gt;You can get help to figure out what type of goose it is with &lt;a href=&quot;https://www.countryfile.com/wildlife/how-to-identify/guide-to-britains-geese-how-to-identify-and-where-to-see&quot;&gt;guidance from BBC Countryfile.&lt;/a&gt;&lt;/P&gt; --&gt;
+&lt;p&gt;If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population.&lt;/p&gt; &lt;p&gt;A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.&lt;/p&gt; &lt;div class=&quot;govuk-form-group&quot;&gt; &lt;fieldset class=&quot;govuk-fieldset&quot;&gt; &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;Yes&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education&quot;&gt; Yes &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education-2&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;No&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education-2&quot;&gt; No &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/fieldset&gt; &lt;/div&gt; &lt;!-- &lt;div class=&quot;govuk-form-group&quot;&gt; &lt;fieldset class=&quot;govuk-fieldset&quot;&gt; &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;White-fronted goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types&quot;&gt; White-fronted goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-2&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-2&quot;&gt; Barnacle goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-3&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Brent goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-3&quot;&gt; Brent goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-4&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Barnacle goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-4&quot;&gt; Barnacle goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-5&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Greylag goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-5&quot;&gt; Greylag goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-6&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Canada goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-6&quot;&gt; Canada goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-7&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Bean goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-7&quot;&gt; Bean goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-8&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Pink-footed goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-8&quot;&gt; Pink-footed goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-9&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Egyptian goose&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-9&quot;&gt; Egyptian goose &lt;/label&gt; &lt;/div&gt; &lt;div class=&quot;govuk-radios__divider&quot;&gt;or&lt;/div&gt; &lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;goose0types-11&quot; name=&quot;goose0types&quot; type=&quot;radio&quot; value=&quot;Not sure&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;goose0types-11&quot;&gt; Not sure &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;/fieldset&gt; &lt;/div&gt; --&gt; &lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt; Continue &lt;/button&gt; &lt;/form&gt;
 
 </code>
 </pre>
@@ -277,52 +258,14 @@ for = "goose0types-11" > Not sure < /label> </div > < /div> </fieldset > < /div>
 
 <pre class="x-govuk-code x-govuk-code--block ">
 <code style="white-space : pre-wrap !important;">
-  < form class = "form"
-action = "/complex-question/accessible-explanation"
-method = "post" >
+  &lt;form class=&quot;form&quot; action=&quot;/complex-question/accessible-explanation&quot; method=&quot;post&quot;&gt;
 
 
 
 
-  <
-  h1 class = "govuk-heading-l" > Gender of the goose < /h1>
+&lt;h1 class=&quot;govuk-heading-l&quot;&gt; Gender of the goose &lt;/h1&gt;
 
-  <
-  p > If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population. < /p> <p>A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.</p >
-
-
-
-
-
-
-
-  <
-  div class = "govuk-form-group" >
-  <
-  fieldset class = "govuk-fieldset" >
-  <
-  legend class = "govuk-fieldset__legend govuk-fieldset__legend--m" >
-  Do you know the gender of the goose ?
-  <
-  /legend>
-
-  <
-  div class = "govuk-radios"
-data - module = "govuk-radios" >
-
-
-
-
-
-
-  <
-  div class = "govuk-radios__item" > < input class = "govuk-radios__input"
-id = "higher-further-education"
-name = "higher-further-education"
-type = "radio"
-value = "Yes" > < label class = "govuk-label govuk-radios__label"
-for = "higher-further-education" > Yes < /label> <
-  /div>
+&lt;p&gt;If you can tell the gender of the goose, this will help us monitor the gender mix of the goose population.&lt;/p&gt; &lt;p&gt;A male goose is normally larger than a female goose, has a deeper honk and may be more agressive.&lt;/p&gt;
 
 
 
@@ -330,21 +273,36 @@ for = "higher-further-education" > Yes < /label> <
 
 
 
-  <
-  div class = "govuk-radios__item" > < input class = "govuk-radios__input"
-id = "higher-further-education-2"
-name = "higher-further-education"
-type = "radio"
-value = "No" > < label class = "govuk-label govuk-radios__label"
-for = "higher-further-education-2" > No < /label> <
-  /div>
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+&lt;fieldset class=&quot;govuk-fieldset&quot;&gt;
+&lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--m&quot;&gt;
+Do you know the gender of the goose?
+&lt;/legend&gt;
+
+&lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt;
 
 
 
-  <
-  /div> <
-  /fieldset> <
-  /div>
+
+
+
+&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;Yes&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education&quot;&gt; Yes &lt;/label&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+&lt;div class=&quot;govuk-radios__item&quot;&gt; &lt;input class=&quot;govuk-radios__input&quot; id=&quot;higher-further-education-2&quot; name=&quot;higher-further-education&quot; type=&quot;radio&quot; value=&quot;No&quot;&gt; &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;higher-further-education-2&quot;&gt; No &lt;/label&gt;
+&lt;/div&gt;
+
+
+
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;/div&gt;
 
 
 
@@ -358,13 +316,9 @@ for = "higher-further-education-2" > No < /label> <
 
 
 
-  <
-  button type = "submit"
-class = "govuk-button"
-data - module = "govuk-button" > Go to explanation of improvements < /button>
+&lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt; Go to explanation of improvements &lt;/button&gt;
 
-  <
-  /form>
+&lt;/form&gt;
 
 </code>
 </pre>

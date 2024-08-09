@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Information pages written as questions
+title: On text pages, avoid headings that are questions
 description: Using information or 'interrupt' pages need special focus to not confuse users.
 tags: "Design"
 mistake:

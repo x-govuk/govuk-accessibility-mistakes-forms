@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Form fields with missing legends
+title: Make sure that answers connected to a question
 description: When a question is too complex to allow for a 1 paragraph description, other approaches are required.
 tags: "Design"
 mistake:

@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Accordions hiding information
+title: Accordions create extra work
 description: Using accordions for information that can be first tried in other formats.
 tags: "Design"
 mistake:
