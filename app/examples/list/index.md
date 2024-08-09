@@ -137,3 +137,10 @@ links:
       href: https://design-system.service.gov.uk/components/summary-list/
 
 ---
+
+{% from "example-partial.njk" import example %}
+
+
+{{ "./app/examples/list/mistake.njk" | getHTMLCode }}
+
+{# example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) #}
