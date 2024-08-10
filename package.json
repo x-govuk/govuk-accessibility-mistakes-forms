@@ -4,28 +4,31 @@
   "description": "Test of govuk eleventy",
   "main": "eleventy.config.js",
   "license": "MIT",
-"scripts": {
-  "prebuild": "rimraf _site",
-  "build": "eleventy",
-  "start": "eleventy --serve --quiet",
-  "preserve": "npm run build",
-  "serve": "http-server ./_site",
-  "test": "standard"
-},
-"dependencies": {
-  "@11ty/eleventy": "^2.0.1",
-  "@x-govuk/govuk-eleventy-plugin": "^6.2.5",
-  "http-server": "^14.1.1",
-  "rimraf": "^6.0.0",
-  "sass": "^1.77.7",
-  "js-beautify": "^1.15.1"
-},
-"devDependencies": {
-  "standard": "^17.1.0",
-  "webshot-node": "^0.18.2"
-},
-"private": true,
-"engines": {
-  "node": "^20"
-}
+  "scripts": {
+    "prebuild": "rimraf _site",
+    "build": "eleventy",
+    "start": "eleventy --serve --quiet",
+    "preserve": "npm run build",
+    "serve": "http-server ./_site",
+    "test": "standard"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@x-govuk/govuk-eleventy-plugin": "^6.2.5",
+    "file-system": "^2.2.2",
+    "gray-matter": "^4.0.3",
+    "http-server": "^14.1.1",
+    "rimraf": "^6.0.0",
+    "sass": "^1.77.7",
+    "smartypants": "^0.2.2"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0",
+    "webshot-node": "^0.18.2"
+  },
+  "private": true,
+  "engines": {
+    "node": "^20"
+  }
 }

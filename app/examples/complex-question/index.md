@@ -5,7 +5,7 @@ description: When a question is too complex to allow for a 1 paragraph descripti
 tags: "Design"
 mistake:
     - description: This example can happen when showing information about a user that they need to check.
-      link: mistake
+      link: /examples/complex-question/mistake
       height: 400px
       reason: A complex question must have a header, information and then the question - without this it is difficult for screen readers to show that there is context or for people with memory issues to remember what is being asked.
       code:  '<form class="form" action="/complex-question/original-explanation" method="post">
@@ -110,11 +110,11 @@ Continue
 </button>
       </form>'
     - description: This example can happen when showing information about a user that they need to check.
-      link: mistake-2
+      link: /examples/complex-question/mistake-2
       height: 600px
       reason: This example puts links between the fieldset and the radio buttons, meaning screen reader users are unlikely to get the link announced. It also causes issues for showing error messages.
 improvement:
-- link: improved
+- link: /examples/complex-question/improved
   height: 500px
   reason: Structuring the page to have header, details and question helps screen readers, audio announcers and general ease of memory. Links will also be announced by a screen reader before the question.
   code: '<form class="form" action="/complex-question/accessible-explanation" method="post">

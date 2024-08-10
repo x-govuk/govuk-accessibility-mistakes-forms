@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Links in hint text confuse screen readers 
+title: Links in hint text confuse screen readers
 description: Fields that hack the GOV.UK pattern for hint text (which should be a paragraph of text only)
 tags: "Code"
 mistake:
@@ -22,9 +22,11 @@ mistake:
            <li>the HMRC app</li>
        <li>on tax returns and other documents from HMRC</li>
            </ul>
-      It might be called ‘reference’, ‘UTR’ or ‘official use’. <a href="https://www.gov.uk/find-utr-number">How to find your UTR</a>
+      It might be called ‘reference’, ‘UTR’ or ‘official use’.
+      <a href="https://www.gov.uk/find-utr-number">How to find your UTR</a>
         </div>
-        <input class="govuk-input" id="example" name="example" type="text" aria-describedby="example-hint">
+        <input class="govuk-input" id="example" name="example" type="text"
+        aria-describedby="example-hint">
       </div>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">

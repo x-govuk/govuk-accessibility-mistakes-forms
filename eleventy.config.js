@@ -1,13 +1,17 @@
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
 const fs = require('fs')
+const path = require('path')
 const matter = require('gray-matter')
-const beautify = require('js-beautify')
+const { readFileSync } = require('fs')
+const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
+
+
+
 module.exports = function(eleventyConfig) {
   // Register the plugin
-
+  eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(govukEleventyPlugin, {
  // add customisations here - uncomment next areas for examples
-
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',
       shortcut:
@@ -18,8 +22,8 @@ module.exports = function(eleventyConfig) {
     opengraphImageUrl:
       'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
     feedUrl: 'feed.xml',
-    homeKey: 'Accessible form design',
-    titleSuffix: 'Accessible form design',
+    homeKey: 'Fix common form accessibility issues',
+    titleSuffix: 'Fix common form accessibility issues',
     parentSite: {
      url: 'https://x-govuk.github.io/#projects',
      name: 'X-GOVUK projects'
@@ -27,7 +31,7 @@ module.exports = function(eleventyConfig) {
     headingPermalinks: true,
     header: {
       logotype: 'x-govuk',
-      productName: 'Accessible form design',
+      productName: 'Fix form accessibility issues',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
@@ -43,21 +47,19 @@ module.exports = function(eleventyConfig) {
       meta: {
         items: [
           {
-            href: "#",
-            text: "Item 1"
+            href: "/accessibility-statement",
+            text: "Accessibility statement"
           },
           {
-            href: "#",
-            text: "Item 2"
-          },
-      {
-        href: "https://github.com",
-        text: "Github"
-      }
-    ]
-},
-          contentLicence: {
-            html: 'An unofficial community project, begun by Vicky Teinaki, Caroline Jarrett and Lori Thomson.'
+            href: "/cookies",
+            text: "Cookies"
+          }
+    ],
+    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a> or <a class="govuk-footer__link" href="https://github.com/vickytnz/xgov-accessibility">source code</a>'
+  },
+
+                  contentLicence: {
+                    html: 'This site  is licenced under a Creative Commons <a class="govuk-footer__link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike</a> 4.0 International license'
           },
           copyright: {
             text: '@X-GOVUK'
@@ -65,50 +67,27 @@ module.exports = function(eleventyConfig) {
         }
 
 
-  }),
+
+  })
+
+  eleventyConfig.addNunjucksShortcode("getHTMLCode", function(component) {
+
+    // Path to the button component file.
+     const filePath = path.join(__dirname, component.url);
+     // If the file doesn't exist, render nothing.
+     if (!fs.existsSync) {
+       return "";
+     }
+     // If the file does exist, read it.
+     const content = fs.readFileSync(filePath).toString();
+     // Tell nunjucks to render the file's content, passing the
+     // arguments to it as the "component" object.
+     return nunjucks.renderString(content).trim()
+
+   });
 
 // Filters
 
-eleventyConfig.addFilter("color", function(string, color) {
-   return `<span style="color: ${color}">${string}</span>`;
- }),
-
-/*
-  eleventyConfig.addFilter("getHTMLCode",  function(path) {
-      const { content } = matter(fs.readFileSync(path, 'utf-8'))
-
-        let html = ''
-          try {
-            html = nunjucks.renderString(content).trim()
-        } catch (error) {
-        console.log(`Could not get HTML code from ${path}`)
-      }
-
-      const options = beautify.html.defaultOptions()
-
-      return beautify.html(html, {
-        indent_size: 2,
-        // Ensure nested labels in headings are indented properly
-        inline: options.inline.filter((tag) => !['label'].includes(tag)),
-        // Remove blank lines
-        max_preserve_newlines: 0,
-        // Ensure attribute wrapping in header SVG is preserved
-        wrap_attributes: 'preserve'
-})
-}), */
-eleventyConfig.addFilter("getHTMLCode",  function(path) {
-
-fs.readFile(path, 'utf8', function (err, data) {
-    if (err) {
-        throw err;
-    }
-    return beautify(data, { indent_size: 2, space_in_empty_paren: true });
-})
-}),
-
-eleventyConfig.addFilter("beautify",  function(path) {
-    return beautify(path, { indent_size: 2, space_in_empty_paren: true });
-})
 
   return {
     dataTemplateEngine: 'njk',

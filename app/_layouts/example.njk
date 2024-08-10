@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block content %}
+<!--
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-quarter-from-desktop">
       {{ xGovukSubNavigation({
@@ -19,16 +20,16 @@
     {# overwrite appDocumentHeader #}
     {#
       {{ appDocumentHeader({
-        title: title,
-        description: description,
+        title: title | noOrphans,
+        description: description | noOrphans,
         tags: tags
       }) }}
 #}
-
+-->
 
 <header class="app-document-header">
   <h1 class="app-document-header__title govuk-heading-xl">
-    {{ title | smart }}
+    {{ title | smart | noOrphans }}
     {%- if tags | length > 0 -%}
     <br>
         {%- for tag in tags %}
@@ -42,7 +43,7 @@
 
   {% if description %}
     <p class="app-document-header__description govuk-body-l">
-      {{ description | markdown("inline") }}
+      {{ description | markdown("inline") | noOrphans }}
     </p>
   {% endif %}
 
@@ -93,8 +94,8 @@
  <div class="app-example-wrapper" id="character-count-example" data-module="app-tabs">
     <div class="app-example app-example--tabs">
       <div class="app-example__toolbar">
-        <a class="app-example__new-window" href="{{link}}" target="_blank">
-          Open this example in a new tab<span class="govuk-visually-hidden">: asking information</span>
+        <a class="govuk-link app-example__new-window" href="{{link}}" target="_blank">
+          Full example <span class="govuk-visually-hidden">: asking information</span> (opens in new tab)
         </a>
       </div>
       <iframe title="Original example" data-module="app-example-frame" class="app-example__frame app-example__frame--resizable" src="{{link}}" loading="eager" id="iFrameResizer0" style="overflow: auto; width: 100%; max-width: 100%; height: {{height}};"></iframe>
@@ -110,13 +111,16 @@
 <div class="app-example app-example__toolbar" >
 
 
-<p> Test</p>
+
 </div>
 
 
 -->
 {% if code %}
-<div class="app-example app-example__toolbar">
+
+<div class="app-example app-example__toolbar ">
+
+<!--
   <details class="govuk-details">
 <summary class="govuk-details__summary">
   <span class="govuk-details__summary-text">
@@ -125,19 +129,32 @@
 </summary>
 <div class="govuk-details__text">
 
+-->
 
 
+<!-- <pre class="x-govuk-code x-govuk-code--block "> -->
 
-<pre class="x-govuk-code x-govuk-code--block ">
-<code style="white-space : pre-wrap !important;">
-  {{ code  | escape }}
+<!-- <code style="white-space : pre-wrap !important;"> -->
+{% highlight "html" %}
+{{code | safe }}
+{% endhighlight %}
 
-</code>
-</pre>
+<!--
+{# import "./app" + link + ".njk" as codeRaw #}
 
+{% highlight "html" %}
+{# codeRaw | safe  #}
+{% endhighlight %}
+
+-->
+
+<!-- </code> -->
+<!-- </pre> -->
+
+<!--
 </div>
 </details>
-
+-->
 </div>
 {% endif %}
 

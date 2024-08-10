@@ -10,28 +10,58 @@ mistake:
   reason: Tabs, like accordions, can be a symptom of unstructured content design. It also does not act as a tab in mobile view so is a unequal experience.
 
   code:  '<table class="govuk-table">
+
          <caption class="govuk-table__caption govuk-table__caption--l">Check previous details</caption>
+
            <tbody class="govuk-table__body">
+
              <tr class="govuk-table__row">
+
                <th scope="row" class="govuk-table__header">Name</th>
+
                <td class="govuk-table__cell">Sarah Philips</td>
+
             </tr>
+
             <tr class="govuk-table__row">
+
               <th scope="row" class="govuk-table__header">Date of birth</th>
+
               <td class="govuk-table__cell">5 January 1978</td>
+
             </tr>
+
             <tr class="govuk-table__row">
+
               <th scope="row" class="govuk-table__header">Address</th>
-              <td class="govuk-table__cell">72 Guild Street<br>London<br>SE23 6FH</td>
+
+              <td class="govuk-table__cell">
+
+              72 Guild Street<br>
+
+              London<br>
+
+              SE23 6FH</td>
+
             </tr>
+
             <tr class="govuk-table__row">
+
               <th scope="row" class="govuk-table__header">Contact details</th>
-              <td class="govuk-table__cell"><p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p></td>
+
+              <td class="govuk-table__cell">
+              
+              <p class="govuk-body">07700 900457</p>
+
+              <p class="govuk-body">sarah.phillips@example.com</p></td>
+
             </tr>
+
           </tbody>
+
         </table>'
 improvement:
-- link: improved
+- link: /examples/tabs/improved
   height: 650px
   reason: Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
   code: '<main class="govuk-main-wrapper" id="main-content">
