@@ -20,7 +20,29 @@
   }) }}
 
   {{ appProseScope(content) if content }}
+
+  <h2 class="govuk-heading-m">Design</h2>
+
+
+
   <ul class="govuk-list">
+  {%- for item in collections['Design']  -%}
+    <li> <a class='govuk-link' href="{{ item.url | pretty }}">{{ item.data.title }}</a></li>
+  {%- endfor -%}
+  </ul>
+
+  <h2 class="govuk-heading-m">Code</h2>
+
+  <ul class="govuk-list">
+  {%- for item in collections['Code'] -%}
+    <li>  <a class='govuk-link' href="{{ item.url | pretty }}">{{ item.data.title }}</a></li>
+  {%- endfor -%}
+  </ul>
+
+<!--
+
+  <ul class="govuk-list">
+
 
   {% for item in collections.ordered | eleventyNavigation(sectionKey or options.homeKey) %}
       <li>
@@ -29,5 +51,7 @@
 
   {% endfor %}
 </ul>
+
+-->
   {% include "layouts/shared/related.njk" %}
 {% endblock %}

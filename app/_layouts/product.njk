@@ -24,7 +24,7 @@
         html: title | smart
       } if title,
       description: {
-        html: baseText | noOrphans
+        html: description | noOrphans
       } if description,
       startButton: {
         href: startButton.href,
@@ -45,12 +45,35 @@
             ]
       }
     }) }}
-    <div class="govuk-main-wrapper {%- if mainClasses %} {{ mainClasses }}{% endif %}">
-      <div class="govuk-width-container {%- if containerClasses %} {{ containerClasses }}{% endif %}">
+    <div class="govuk-width-container">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+  {% block beforeContent %}{% endblock %}
+      {{ appProseScope(content) if content }}
 
-          {{ appProseScope(content) if content }}
-
+      <div class="govuk-grid-column-full">
       </div>
+<div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Design</h2>
+
+
+
+      <ul class="govuk-list">
+      {%- for item in collections['Design']  -%}
+        <li> <a class='govuk-link' href="{{ item.url | pretty }}">{{ item.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+</div><div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">Code implementation</h2>
+
+      <ul class="govuk-list">
+      {%- for item in collections['Code'] -%}
+        <li>  <a class='govuk-link' href="{{ item.url | pretty }}">{{ item.data.title }}</a></li>
+      {%- endfor -%}
+      </ul>
+</div>
+
+
+</div>
     </div>
   </main>
 {% endblock %}

@@ -1,8 +1,9 @@
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
+/*
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
-const { readFileSync } = require('fs')
+const { readFileSync } = require('fs') */
 const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 
@@ -53,6 +54,10 @@ module.exports = function(eleventyConfig) {
           {
             href: "/cookies",
             text: "Cookies"
+          },
+          {
+            href: "/sitemap",
+            text: "Sitemap"
           }
     ],
     html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a> or <a class="govuk-footer__link" href="https://github.com/vickytnz/xgov-accessibility">source code</a>'
@@ -70,6 +75,7 @@ module.exports = function(eleventyConfig) {
 
   })
 
+/*
   eleventyConfig.addNunjucksShortcode("getHTMLCode", function(component) {
 
     // Path to the button component file.
@@ -85,6 +91,8 @@ module.exports = function(eleventyConfig) {
      return nunjucks.renderString(content).trim()
 
    });
+
+*/
 
 // Filters
 
