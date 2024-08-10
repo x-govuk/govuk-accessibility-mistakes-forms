@@ -5,7 +5,7 @@ This is a project to show common mistakes and improvements for forms designed us
 ## Prototype
 The current prototype is available with password protection while it is still under development. 
 
-http://xgov-accessibility.vickytnz.com/ 
+http://xgov-accessibility.vickytnz.com/ or https://xgov-accessibility-7c602e50a75a.herokuapp.com/ 
 
 username: ``accessibility``
 password: ``accessibility``
