@@ -14,4 +14,4 @@ password: ``accessibility``
 The site has some known bugs with the passwords showing up so may need a few refreshes to get in.
 
 ## Contribute
-This is available under a CC-4.0 Internaional licence. You can create examples, or contact Vicky Teinaki for more information. 
+This is available under a CC-4.0 International licence. You can create examples, or contact Vicky Teinaki for more information. 
