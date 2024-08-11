@@ -37,11 +37,11 @@ $govuk-page-width: 1100px;
 
 /* fixing app header issues - remove if fixed upstream */
 .govuk-header__container {
-  border-bottom: 11px solid $govuk-brand-colour !important;
+  border-bottom: 11px solid $govuk-brand-colour !important; // random line appears so 1px extra
 }
 
 .app-header--no-border {
-    border-bottom: 11px solid $govuk-brand-colour !important;
+    border-bottom: 10px solid $govuk-brand-colour !important;
     margin-bottom: 0;
 }
 
