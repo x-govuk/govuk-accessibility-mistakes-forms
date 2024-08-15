@@ -1,7 +1,7 @@
 ---
 layout: example
-title: On text pages, avoid headings that are questions
-description: Using information or 'interrupt' pages need special focus to not confuse users.
+title: Do not use questions on information pages
+description: Using information on informatio pages (for example 'interrupt' pages) need special focus to not confuse users.
 tags: "Design"
 mistake:
 - description: This example can happen when showing information about a user that they need to check.

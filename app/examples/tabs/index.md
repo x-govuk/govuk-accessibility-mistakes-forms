@@ -21,5 +21,7 @@ links:
       href: https://amyhupe.co.uk/articles/dont-be-afraid-of-the-big-long-page/    
     - text: Definition lists information in the GOV.UK Design system
       href: https://design-system.service.gov.uk/components/summary-list/
+    - text: Tabs, Used Right on NN/g
+      href: https://www.nngroup.com/articles/tabs-used-right/
 
 ---
