@@ -1,0 +1,73 @@
+{# Plugin layouts can be loaded from "layouts" #}
+
+{% set title = "Examples of incorrect label formatting" %}
+
+{% extends "layouts/page.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{# Load any GOV.UK Frontend components #}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% block content %}
+
+
+  <span class="govuk-caption-xl">
+          Original version
+        </span>
+
+
+        <h1 class="govuk-heading-l">
+    Your name
+
+              </h1>
+        <form class="form" action="#" method="post">
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+        {{ govukInput({
+          label: {
+            text: "First name or names"
+          },
+          hint: {
+            text: "This must be your legal first name or names"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "first-name",
+          name: "firstName"
+        }) }}
+
+
+        {{ govukInput({
+          label: {
+            text: "Middle name or names (if you have them)"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "middle-names",
+          name: "middleName"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Family name or names"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "lastName",
+          name: "lastName"
+        }) }}
+
+
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+              </form>
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
