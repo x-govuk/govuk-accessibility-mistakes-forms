@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
     titleSuffix: 'Fix common form accessibility issues',
     parentSite: {
      url: 'https://x-govuk.github.io/#projects',
-     name: 'X-GOVUK projects'
+     name: 'All X-GOVUK projects'
    },
     headingPermalinks: true,
     header: {

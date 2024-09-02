@@ -1,20 +1,19 @@
 ---
 layout: example
-title: Do not use questions on information pages
-description: Using information on informatio pages (for example 'interrupt' pages) need special focus to not confuse users.
+title: Do not use a question as a heading unless a user can answer it on the page
+description: If you put a question in a form page, it needs to have a way for a user to answer it.
 tags: "Design"
 mistake:
-- description: This example can happen when showing information about a user that they need to check.
+- description:
   link: mistake
   height: 700px
-  reason: A question header suggests to at user that there is an answer that is needed. This is a version of frequenty askes questions (FAQs) which may be used on website but are not recommended in digital forms as they mix questions with guidance.
-improvement:
+  reason: In this example, 'can you apply' is just a heading. The only options are to 'continue' or 'return to GOV'UK' - neither of which answers the question. Another better option is to turn this into an actual question with answers. 
 - link: improved
   height: 700px
-  reason: Rewriting the header to be a statement makes it clear that the user does not have to answer anything (this is usually done in GOV.UK style with '-ing', also called a gerund). Another option is to a proper complex question.
+  reason: Rewriting the header to be a sentence makes it clear that the user does not have to answer anything.   
 - link: improved-2
   height: 750px
-  reason: Another alternative is to turn the page into an actual question (or even several questions).
+  reason: If the question is in a heading because users need to review a lot of criteria, ask it in a way that they can select what applies to them, such as a filtering question [to be added]
 
 
 links:

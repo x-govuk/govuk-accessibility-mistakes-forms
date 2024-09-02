@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Do not use links in 'aria-described' areas like hint text
+title: Do not use links in ‘aria-described’ areas like hint text
 description: Fields that hack the GOV.UK pattern for hint text (which should be a paragraph of text only)
 tags: "Code"
 mistake:
