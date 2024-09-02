@@ -110,7 +110,7 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts" /* ,
       includes: '_components' */
     },
-    pathPrefix: process.env.GITHUB_ACTIONS ? '/form-accessibility-issues/' : '/'
+    pathPrefix: process.env.GITHUB_ACTIONS ? '/xgov-accessibility/' : '/'
 
   }
 };
