@@ -13,4 +13,14 @@ Caroine Jarrett has been actively involved in this project since June 2024 givin
 
 Thanks to Adam Liptrot for comments (and his related project, the [Pattern Checker Chrome plugin](https://liptrot.org/pattern-checker/).
 
-In August 2024 the website was switched to use the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/).
+In August 2024 the website was switched to use the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/). It was released without password protection on 3 September with:
+
+- complex question
+- form fields, hints and links
+- information pages
+- input labels
+- link focus
+- list
+- tabs
+- unique text with repeated actions
+- accordions
