@@ -11,6 +11,7 @@ const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 module.exports = function(eleventyConfig) {
   // Register the plugin
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(govukEleventyPlugin, {
  // add customisations here - uncomment next areas for examples
     icons: {
