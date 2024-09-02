@@ -108,6 +108,8 @@ module.exports = function(eleventyConfig) {
       //layouts: '../node_modules/@x-govuk/govuk-eleventy-plugin/layouts',
       layouts: "_layouts" /* ,
       includes: '_components' */
-    }
+    },
+    pathPrefix: "/form-accessibility-issues/"
+
   }
 };
