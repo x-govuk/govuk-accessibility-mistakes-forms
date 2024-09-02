@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
     headingPermalinks: true,
     header: {
       logotype: 'x-govuk',
-      productName: 'Fix form accessibility issues',
+      productName: 'Fix common form accessibility issues',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
