@@ -7500,6 +7500,13 @@ padding-top: 11px !important;
 }
 */
 /* end fixing app header issues  */
+.x-govuk-masthead {
+  padding-top: 0.1px;
+}
+.x-govuk-masthead > .govuk-width-container {
+  flex: none;
+}
+
 .option-toggle {
   width: 100%;
   text-align: right;
