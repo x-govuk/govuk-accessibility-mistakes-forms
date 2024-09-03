@@ -5,7 +5,7 @@ description: Using tables instead of definition lists creates noise for screen r
 tags: "Code"
 mistake:
 - description: This example can happen when showing information about a user that they need to check.
-  link: /examples/list/mistake
+  link: mistake
   height: 700px
   reason: This is coded as a table rather than a definition list. Table are far more 'noisy' for screen reader users as they read out row and columns, and the table caption doubling as a page title may also confuse sighted screen reader users.
   code: <table class="govuk-table">
@@ -58,7 +58,7 @@ mistake:
 
         </table>
 improvement:
-- link: /examples/list/improved
+- link: improved
   height: 600px
   reason: Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
   code: '<main class="govuk-main-wrapper" id="main-content">
@@ -169,11 +169,3 @@ links:
       href: https://design-system.service.gov.uk/components/summary-list/
 
 ---
-
-{% from "example-partial.njk" import example %}
-
-
-
-
-
-{# example({ group: "components", item: "breadcrumbs", example: "default", html: true, nunjucks: true, open: false, loading: "eager" }) #}
