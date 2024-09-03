@@ -11,7 +11,7 @@ mistake:
 improvement:
 - link: improved
   height: 700px
-  reason: Using autocomplete means that any saved fields are more likely to be correctly suggested
+  reason: Using autocomplete means that any saved fields are more likely to be correctly suggested.
 
 links:
     - text: Autofill fields on the HTML specification

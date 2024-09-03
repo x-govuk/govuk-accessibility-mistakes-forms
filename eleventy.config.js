@@ -7,7 +7,6 @@ const { readFileSync } = require('fs') */
 const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 
-
 module.exports = function(eleventyConfig) {
   // Register the plugin
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
@@ -63,7 +62,7 @@ module.exports = function(eleventyConfig) {
             text: "Sitemap"
           }
     ],
-    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a> or <a class="govuk-footer__link" href="https://github.com/vickytnz/xgov-accessibility">source code</a>'
+    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/vickytnz/xgov-accessibility">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
   },
 
                   contentLicence: {
