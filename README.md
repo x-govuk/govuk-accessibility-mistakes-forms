@@ -5,7 +5,7 @@ This is a project to show common mistakes and improvements for forms designed us
 ## Prototype
 The current prototype is available with password protection while it is still under development.
 
-http://vickytnz.github.io/xgov-accessibility
+http://x-govuk.github.io/govuk-accessibility-mistakes-forms
 
 The site has some known bugs with the passwords showing up so may need a few refreshes to get in.
 

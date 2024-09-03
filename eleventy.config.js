@@ -30,7 +30,7 @@ module.exports = function(eleventyConfig) {
    },
    url:
       process.env.GITHUB_ACTIONS &&
-      'https://vickytnz.github.io/xgov-accessibility/',
+      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/',
     headingPermalinks: true,
     header: {
       logotype: 'x-govuk',
@@ -62,7 +62,7 @@ module.exports = function(eleventyConfig) {
             text: "Sitemap"
           }
     ],
-    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/vickytnz/xgov-accessibility">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
+    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
   },
 
                   contentLicence: {
@@ -98,7 +98,6 @@ module.exports = function(eleventyConfig) {
 
 // Filters
 
-
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
@@ -111,7 +110,7 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts" /* ,
       includes: '_components' */
     },
-    pathPrefix: process.env.GITHUB_ACTIONS ? '/xgov-accessibility/' : '/'
+    pathPrefix: process.env.GITHUB_ACTIONS ? '/govuk-accessibility-mistakes-forms/' : '/'
 
   }
 };

@@ -7,7 +7,7 @@ title: Contribute
 ---
 
 
-If you have comments, questions, or would like to contribute, then [join us on our GitHub repository](https://github.com/vickytnz/xgov-accessibility).
+If you have comments, questions, or would like to contribute, then [join us on our GitHub repository](https://github.com/vickytnz/govuk-accessibility-mistakes-forms).
 
 ## Contributors
 
