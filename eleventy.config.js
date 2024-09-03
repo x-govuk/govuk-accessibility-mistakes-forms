@@ -37,7 +37,8 @@ module.exports = function(eleventyConfig) {
       productName: 'Fix common accessibility mistakes in forms',
       search: {
         indexPath: '/search.json',
-        sitemapPath: '/sitemap'
+        sitemapPath: '/sitemap',
+        label: "Search examples"
       }
     },
 
