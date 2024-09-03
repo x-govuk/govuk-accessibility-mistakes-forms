@@ -19,14 +19,15 @@
         Improved version
         </span></span>
         <h1 class="govuk-heading-l">
-      Checking if you can apply
+      Check if you can apply
 
               </h1>
         <form class="form" action="/content/original-explanation" method="post">
 
 
+
+
 <p class="govuk-body">
-[CHANGE TO CHECKBOXES]
 
 You can only apply if you are:
 </P>
@@ -45,16 +46,12 @@ You can only apply if you are:
 </ul>
 
 
-<p class="govuk-body">
-If you are not eligible you can <a href="#">return to GOV.UK</a>.
-</P>
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
   name: "changedName",
   fieldset: {
     legend: {
-      text: "Are you eligible to apply?",
+      text: "Do you meet the conditions to apply?",
       classes: "govuk-fieldset__legend--m"
     }
   },

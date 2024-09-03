@@ -167,9 +167,11 @@
 {% if loop.index0 == 0 %}
 <h2 id="typical-example" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#typical-example"><span>Typical example{% if loop.length > 1%}s{% endif %} that cause{% if loop.length == 1%}s{% endif %} barriers </span></a></h2>
 {% endif %}
-<p class="govuk-body">{{i.description}}</p>
 
 {% if loop.length > 1%}<h3 id="example-{{loop.index}}" class="govuk-heading-m">Example {{loop.index}}</h3>{% endif %}
+
+{% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
+
 
 {{ codeAndImage(i.link, i.height, i.code) }}
 
@@ -184,6 +186,7 @@
 {% for i in improvement %}
 
 {% if loop.length > 1%}<h3 id="example-{{loop.index}}" class="govuk-heading-m">Improvement {{loop.index}}</h3>{% endif %}
+{% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
 
 {{ codeAndImage(i.link, i.height, i.code) }}
 

@@ -9,6 +9,7 @@
 
 {# Load any GOV.UK Frontend components #}
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 {% block content %}
 
@@ -16,34 +17,53 @@
   <span class="govuk-caption-xl">
         Improved version
         </span></span>
-        <h1 class="govuk-heading-l">
-      Check whether you can apply
-
-              </h1>
-        <form class="form" action="/content/original-explanation" method="post">
+          <form class="form" action="/content/original-explanation" method="post">
 
 
-<p class="govuk-body">
-You can only apply if you are:
-</P>
-<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-  <li>
-    constructing, altering, repairing, extending, demolishing or dismantling buildings or structures (whether permanent or not), including offshore installation services
-  </li>
-  <li>
-    constructing, altering, repairing, extending, demolishing of any works forming, or planned to form, part of the land, including (in particular) walls, roadworks, power lines, electronic communications equipment, aircraft runways, railways, inland waterways, docks and harbours
-  </li>
-  <li>
-    pipelines, reservoirs, water mains, wells, sewers, industrial plant and installations for purposes of land drainage, coast protection or defence
-  </li>
-  <li>
-    installing heating, lighting, air-conditioning, ventilation, power supply, drainage, sanitation, water supply or fire protection systems in any building or structure
-</ul>
+                          {{ govukCheckboxes({
+                            name: "countries",
+                            fieldset: {
+                              legend: {
+                                text: "Are you doing any of these activities?",
+                                isPageHeading: true,
+                                classes: "govuk-fieldset__legend--l"
+                              }
+                            },
+                            hint: {
+                              text: "Select all countries that apply"
+                            },
+                            items: [
+                              {
+                                value: "france",
+                                text: "Constructing, altering, repairing, extending, demolishing or dismantling buildings or structures (whether permanent or not), including offshore installation services"
+                              },
+                              {
+                                value: "portugal",
+                                text: "Constructing, altering, repairing, extending, demolishing of any works forming, or planned to form, part of the land, including (in particular) walls, roadworks, power lines, electronic communications equipment, aircraft runways, railways, inland waterways, docks and harbours"
+                              },
+                              {
+                                value: "spain",
+                                text: "Pipelines, reservoirs, water mains, wells, sewers, industrial plant and installations for purposes of land drainage, coast protection or defence"
+                              },
+                              {
+                                value: "something",
+                                text: "Installing heating, lighting, air-conditioning, ventilation, power supply, drainage, sanitation, water supply or fire protection systems in any building or structure"
+                              },
+                              {
+                                divider: "or"
+                              },
+                              {
+                                value: "none",
+                                text: "None of these",
+                                behaviour: "exclusive"
+                              }
+                            ]
+                          }) }}
 
 
-<p class="govuk-body">
-If you are not eligible you can <a href="#">return to GOV.UK</a>.
-</P>
+
+
+
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue

@@ -11,8 +11,8 @@ If you have comments, questions, or would like to contribute, then [join us on o
 
 ## Contributors
 
-Built by Vicky Teinaki and Caroline Jarrett.
+Built by Vicky Teinaki.
 
-Content support from: Lori Thomson, Adam Liptrot, Ed Horsford.
+Content support from: Caroline Jarrett, Lori Thomson. Extra guidance from Adam Liptrot, Ed Horsford.
 
 Hosted by Vicky Teinaki.

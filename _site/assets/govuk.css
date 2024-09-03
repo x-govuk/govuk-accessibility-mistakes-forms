@@ -7975,6 +7975,16 @@ pre > code.highlight {
   background: linear-gradient(to right, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0));
 }
 
+.old-frontend a:focus, .old-frontend govuk-link:focus {
+  background-color: #ffbf48;
+}
+
+.old-frontend .govuk-skip-link:focus {
+  outline: 3px solid #ffbf48;
+  outline-offset: 0;
+  background-color: #ffbf48;
+}
+
 
 
 
@@ -8632,12 +8642,14 @@ pre > code.highlight {
   background-color: #8822aa;
   color: #ffffff;
   display: flex;
-  padding-top: 0.1px;
 }
 @media (min-width: 40.0625em) {
   .x-govuk-masthead {
     padding-bottom: 20px;
   }
+}
+.x-govuk-masthead > .govuk-width-container {
+  flex: 1;
 }
 
 .x-govuk-masthead__title {

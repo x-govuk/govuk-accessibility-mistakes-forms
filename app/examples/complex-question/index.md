@@ -1,12 +1,12 @@
 ---
 layout: example
 title: Make sure that answers are connected to a question
-description: When a question is too complex to allow for a 1 paragraph description, other approaches are required.
+description: Input fields separated too far from the initial question cause barriers.
 tags: "Design"
 mistake:
     - description: This example can happen when showing information about a user that they need to check.
       link: /examples/complex-question/mistake
-      height: 400px
+      height: 600px
       reason: A complex question must have a header, information and then the question - without this it is difficult for screen readers to show that there is context or for people with memory issues to remember what is being asked.
     - description: This example can happen when showing information about a user that they need to check.
       link: /examples/complex-question/mistake-2
