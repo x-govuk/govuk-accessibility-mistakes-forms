@@ -7500,13 +7500,6 @@ padding-top: 11px !important;
 }
 */
 /* end fixing app header issues  */
-.x-govuk-masthead {
-  padding-top: 0.1px;
-}
-.x-govuk-masthead > .govuk-width-container {
-  flex: none;
-}
-
 .option-toggle {
   width: 100%;
   text-align: right;
@@ -8639,14 +8632,12 @@ pre > code.highlight {
   background-color: #8822aa;
   color: #ffffff;
   display: flex;
+  padding-top: 0.1px;
 }
 @media (min-width: 40.0625em) {
   .x-govuk-masthead {
     padding-bottom: 20px;
   }
-}
-.x-govuk-masthead > .govuk-width-container {
-  flex: 1;
 }
 
 .x-govuk-masthead__title {

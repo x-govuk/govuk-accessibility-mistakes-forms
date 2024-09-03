@@ -58,12 +58,7 @@ padding-top: 11px !important;
 */
 /* end fixing app header issues  */
 
-.x-govuk-masthead {
-  padding-top: 0.1px; // Prevent margin collapse
-  > .govuk-width-container {
-    flex: none;
-  }
-}
+
 
 
 .option-toggle {
