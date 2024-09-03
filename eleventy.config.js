@@ -29,10 +29,13 @@ module.exports = function(eleventyConfig) {
      url: 'https://x-govuk.github.io/#projects',
      name: 'All X-GOVUK projects'
    },
+   url:
+      process.env.GITHUB_ACTIONS &&
+      'https://vickytnz.github.io/xgov-accessibility/',
     headingPermalinks: true,
     header: {
       logotype: 'x-govuk',
-      productName: 'Fix common form accessibility issues',
+      productName: 'Fix common accessibility issues in forms',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'

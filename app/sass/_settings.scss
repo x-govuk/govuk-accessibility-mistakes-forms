@@ -36,8 +36,10 @@ $govuk-page-width: 1100px;
 */
 
 /* fixing app header issues - remove if fixed upstream */
+
+/*
 .govuk-header__container {
-  border-bottom: 11px solid $govuk-brand-colour !important; // random line appears so 1px extra
+  border-bottom: 11px solid $govuk-brand-colour !important;
 }
 
 .app-header--no-border {
@@ -47,13 +49,13 @@ $govuk-page-width: 1100px;
 
 .x-govuk-masthead {
   margin-top: -15px !important;
-  display: block !important; //fixing flex issue when zoomed out;
+  display: block !important;
 }
 
 .x-govuk-masthead > .govuk-width-container .govuk-breadcrumbs{
-padding-top: 11px !important; //line up with other parts of the site for breadcrumbs
+padding-top: 11px !important;
 }
-
+*/
 /* end fixing app header issues  */
 
 .option-toggle {

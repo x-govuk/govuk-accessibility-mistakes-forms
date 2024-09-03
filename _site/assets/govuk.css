@@ -7480,13 +7480,14 @@
 
 */
 /* fixing app header issues - remove if fixed upstream */
+/*
 .govuk-header__container {
-  border-bottom: 11px solid #8822aa !important;
+  border-bottom: 11px solid $govuk-brand-colour !important;
 }
 
 .app-header--no-border {
-  border-bottom: 10px solid #8822aa !important;
-  margin-bottom: 0;
+    border-bottom: 10px solid $govuk-brand-colour !important;
+    margin-bottom: 0;
 }
 
 .x-govuk-masthead {
@@ -7494,10 +7495,10 @@
   display: block !important;
 }
 
-.x-govuk-masthead > .govuk-width-container .govuk-breadcrumbs {
-  padding-top: 11px !important;
+.x-govuk-masthead > .govuk-width-container .govuk-breadcrumbs{
+padding-top: 11px !important;
 }
-
+*/
 /* end fixing app header issues  */
 .option-toggle {
   width: 100%;
