@@ -89,7 +89,7 @@
 </ol>
 
 
-{% macro codeAndImage(link, height, code="")%}
+{% macro example(link)%}
 
 
 <div class="govuk-tabs app-example__tabs" data-module="govuk-tabs">
@@ -141,7 +141,7 @@
 {% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
 
 
-{{ codeAndImage(i.link, i.height, i.code) }}
+{{ example(i.link) }}
 
 
 <p class="govuk-body">{{i.reason}}</p>
@@ -156,7 +156,7 @@
 {% if loop.length > 1%}<h3 id="example-{{loop.index}}" class="govuk-heading-m">Improvement {{loop.index}}</h3>{% endif %}
 {% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
 
-{{ codeAndImage(i.link, i.height, i.code) }}
+{{ example(i.link) }}
 
 <p class="govuk-body">{{i.reason}}</p>
 {% endfor %}
