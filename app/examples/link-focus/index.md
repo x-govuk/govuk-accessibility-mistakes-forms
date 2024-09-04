@@ -3,6 +3,9 @@ layout: example
 title: Do not forget link focus states
 description: Links must be distinct when focused and with sufficient colour contrast. This is a WCAG requirement.
 tags: "Code"
+wcag:
+- text: "WCAG 2.2 2.4.7: Focus Visible (Level AA)"
+  link: https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html
 mistake:
 - link: link-focus/mistake
   description: This example is most likely to happen if the GOV.UK Frontend is being rebuilt in a codebase as an abstraction rather than using default templates.

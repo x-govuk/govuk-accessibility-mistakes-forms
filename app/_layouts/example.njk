@@ -46,6 +46,24 @@
       {{ description | markdown("inline") | noOrphans }}
     </p>
   {% endif %}
+{% if wcag %}
+
+
+
+  <div class="govuk-inset-text">
+
+    <p class="govuk-body">This mistake can mean a failure of
+
+      {% for i in wcag %}
+    <a class="govuk-link" href="{{i.link}}">{{ i.text}}</a>
+
+{% endfor %}
+    </p>
+  </div>
+  {% endif %}
+
+
+
 
 {#
   {% if date or modified or authors or author or tags %}
