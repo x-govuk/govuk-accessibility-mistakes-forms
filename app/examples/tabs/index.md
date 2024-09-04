@@ -6,12 +6,10 @@ tags: "Design"
 mistake:
 - description: Tabs can be mistakenly used for for scenarios where people need to compare details across tabs.
   link: tabs/mistake
-  height: 500px
   reason: Tabs, like accordions, can be a symptom of unstructured content design. It also does not act as a tab in mobile view so is a unequal experience.
 
 improvement:
 - link: tabs/improved
-  height: 650px
   reason: Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
 
 links:

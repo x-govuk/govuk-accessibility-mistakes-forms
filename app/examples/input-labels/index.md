@@ -6,11 +6,9 @@ tags: "Code"
 mistake:
 - description: This example can happen with input fields that include saved information like a username, email address or password. Try this with a browser such as Safari.
   link: input-labels/mistake
-  height: 700px
   reason: Without programatic context, autofill can't guess as to what the field is.
 improvement:
 - link: input-labels/improved
-  height: 700px
   reason: Using autocomplete means that any saved fields are more likely to be correctly suggested.
 
 links:
