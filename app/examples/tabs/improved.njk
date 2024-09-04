@@ -1,23 +1,9 @@
-{# Plugin layouts can be loaded from "layouts" #}
+---
+layout: example-partial.njk
+title: Name
+eleventyExcludeFromCollections: true
+---
 
-{% set title = "Name" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
-
-{# Load any GOV.UK Frontend components #}
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-
-
-{% block content %}
-
-
-
-
-<!-- The version can be as different from the original version as you want, you have complete control over the code -->
 <span class="govuk-caption-xl">
        Improved version
       </span>
@@ -48,11 +34,3 @@
 <!--      <p class="govuk-body">Last updated 1 January 2025.</p> -->
       <p class="govuk-body">This account has a 9% AER interest rate</p>
 <hr>
-
-
-
-
-{% endblock %}
-
-{% block footer %}
-{% endblock %}

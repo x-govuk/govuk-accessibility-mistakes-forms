@@ -5,16 +5,13 @@ description: Fields that hack the GOV.UK pattern for hint text (which should be 
 tags: "Code"
 mistake:
 - description: This example can happen when a question is 'one thing per page' or if multiple things are on a page.
-  link: mistake
-  height: 500px
+  link: form-fields-hints-links/mistake
   reason: Hints (information between the input legend and the input field) must be simple without complex formatting or links. If extra formatting like lists and links are put in the hint area between an input legend and the input, a screenreader may not read them correctly.
 - description:
-  link: mistake-2
-  height: 400px
+  link: form-fields-hints-links/mistake-2
   reason: Hints within input fields will not be read by the screenreader
 improvement:
-- link: improved
-  height: 450px
+- link: form-fields-hints-links/improved
   reason: Simple hints will be read out as expected by screen readers. If the input needs significant guidance and links, it should be rewritten as a complex question.
 
 links:

@@ -1,19 +1,11 @@
-{# Plugin layouts can be loaded from "layouts" #}
+---
+layout: example-partial.njk
+title: Examples of complex information
+eleventyExcludeFromCollections: true
+---
 
-{% set title = "Examples of complex information" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
-
-{# Load any GOV.UK Frontend components #}
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{% block content %}
-
-
   <span class="govuk-caption-xl">
         Improved version
         </span></span>
@@ -69,13 +61,3 @@
           Continue
         </button>
               </form>
-
-
-
-
-
-
-{% endblock %}
-
-{% block footer %}
-{% endblock %}

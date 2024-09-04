@@ -5,17 +5,14 @@ description: If you put a question in a form page, it needs to have a way for a 
 tags: "Design"
 mistake:
 - description:
-  link: mistake
-  height: 700px
+  link: information-pages/mistake
   reason: In this example, 'can you apply' is just a heading. The only options are to 'continue' or 'return to GOV'UK' - neither of which answers the question. Another better option is to turn this into an actual question with answers.
 improvement:
 - description: If possible, ask multiple conditions with multiple questions that people can work through.
-  link: improved
-  height: 700px
-  reason: Rewriting the header to be a sentence makes it clear that the user does not have to answer anything.   
+  link: information-pages/improved
+  reason: Rewriting the header to be a sentence makes it clear that the user does not have to answer anything.
 - description: If the question cannot be made into multiple input fields (for example because the information cannot be used again, therefore breaking other WCAG rules) the question can be changed into a complex quesiton.
-  link: improved-2
-  height: 750px
+  link: information-pages/improved-2
   reason: This still allows the page to have a question that can be answered.
 links:
     - text: NHS service manual on how to write good questions for forms

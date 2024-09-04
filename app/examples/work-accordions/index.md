@@ -5,12 +5,10 @@ description: Using accordions for information that can be first tried in other f
 tags: "Design"
 mistake:
 - description: This example can happen when showing information about a user that they need to check.
-  link: mistake
-  height: 700px
+  link: work-accordions/mistake
   reason: Accordions hide key information that may be necessary for everyone. While there may be uses for accordions in some scenarios like caseworking systems, generally it is better to start by either no content and adding when there is a need, or all content and using headers, links and occasional details text.
 improvement:
-- link: improved
-  height: 620px
+- link: work-accordions/improved
   reason: Showing information as a start helps everyone get the information - if there is too much information then the page needs to be redesigned.
 
 
