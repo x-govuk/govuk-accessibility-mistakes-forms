@@ -1,16 +1,11 @@
 ---
 layout: example-partial.njk
 eleventyExcludeFromCollections: true
+title: Name
 ---
-{# Plugin layouts can be loaded from "layouts" #}
 
-{% set title = "Name" %}
-
-{# Load any GOV.UK Frontend components #}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-{% block content %}
-  {# Templates can include front matter data #}
   {{ govukNotificationBanner({
     text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
     It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
@@ -97,7 +92,4 @@ eleventyExcludeFromCollections: true
 
 
   {{ appProseScope(content) if content }}
-{% endblock %}
-
-{% block footer %}
 {% endblock %}
