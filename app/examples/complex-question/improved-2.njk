@@ -1,11 +1,9 @@
+---
+layout: example-partial.njk
+---
 {# Plugin layouts can be loaded from "layouts" #}
 
 {% set title = "Name" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
 
 {# Load any GOV.UK Frontend components #}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}

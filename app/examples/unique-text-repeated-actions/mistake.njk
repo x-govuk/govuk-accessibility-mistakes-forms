@@ -1,17 +1,7 @@
-{# Plugin layouts can be loaded from "layouts" #}
-
-{% set title = "Examples of missing unique change text" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
-
-{# Load any GOV.UK Frontend components #}
-
-{% block content %}
-
-
+---
+layout: example-partial.njk
+title: Examples of missing unique change text
+---
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
@@ -86,8 +76,3 @@
     }
   ]
 }) }}
-
-{% endblock %}
-
-{% block footer %}
-{% endblock %}

@@ -1,18 +1,7 @@
-{# Plugin layouts can be loaded from "layouts" #}
-
-{% set title = "Examples of complex information" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
-
-{# Load any GOV.UK Frontend components #}
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-
-{% block content %}
-
-
+---
+layout: example-partial.njk
+title: Examples of complex information
+---
   <span class="govuk-caption-xl">
         Improved version
         </span>
@@ -69,14 +58,3 @@
 
 
                                 </form>
-
-
-
-
-
-
-
-{% endblock %}
-
-{% block footer %}
-{% endblock %}

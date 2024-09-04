@@ -1,16 +1,9 @@
-{# Plugin layouts can be loaded from "layouts" #}
+---
+layout: example-partial.njk
+title: Name
+---
 
-{% set title = "Name" %}
-
-{% extends "layouts/page.njk" %}
-
-{% block header %}
-{% endblock %}
-
-{# Load any GOV.UK Frontend components #}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-{% block content %}
   {# Templates can include front matter data #}
   {{ govukNotificationBanner({
     text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
@@ -85,10 +78,3 @@
 
 
             </form>
-
-
-
-{% endblock %}
-
-{% block footer %}
-{% endblock %}

@@ -5,18 +5,18 @@ description: Input fields separated too far from the initial question cause barr
 tags: "Design"
 mistake:
     - description: This example can happen when showing information about a user that they need to check.
-      link: /examples/complex-question/mistake
+      link: complex-question/mistake
       height: 600px
       reason: A complex question must have a header, information and then the question - without this it is difficult for screen readers to show that there is context or for people with memory issues to remember what is being asked.
     - description: This example can happen when showing information about a user that they need to check.
-      link: /examples/complex-question/mistake-2
+      link: complex-question/mistake-2
       height: 600px
       reason: This example puts links between the fieldset and the radio buttons, meaning screen reader users are unlikely to get the link announced. It also causes issues for showing error messages.
 improvement:
-- link: /examples/complex-question/improved
+- link: complex-question/improved
   height: 500px
   reason: Structuring the page to have header, details and question helps screen readers, audio announcers and general ease of memory. Links will also be announced by a screen reader before the question.
-- link: improved-2
+- link: complex-question/improved-2
   height: 600px
   reason: This example reintroduced a clear fieldset header for the radio buttons, and also changes the existing fields to separate searching for an existing result with choosing one based on the previous information.
 links:
