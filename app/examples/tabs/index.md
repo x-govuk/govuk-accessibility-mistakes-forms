@@ -1,10 +1,10 @@
 ---
 layout: example
 title: Avoid tabs for complex content
-description: Tabs can often be used outside of their ideal use case.
+description: The primary use case for tabs is when one set of information is far more important than others and does not need to be compared.
 tags: "Design"
 mistake:
-- description: Tabs can be mistakenly used for for scenarios where people need to compare details across tabs.
+- description: Tabs can be mistakenly used for scenarios where people need to compare details across tabs.
   link: tabs/mistake
   reason: Tabs, like accordions, can be a symptom of unstructured content design. It also does not act as a tab in mobile view so is a unequal experience.
 

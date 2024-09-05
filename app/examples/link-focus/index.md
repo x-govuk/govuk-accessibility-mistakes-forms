@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Do not forget link focus states
-description: Links must be distinct when focused and with sufficient colour contrast. This is a WCAG requirement.
+description: Links must be distinct when focused and with sufficient colour contrast. This can get missed if manually rebuilding GOV.UK Frontend manually (for example if using a Javascript framework) or using an old version of GOV.UK Frontend.
 tags: "Code"
 wcag:
 - text: "WCAG 2.2 2.4.7: Focus Visible (Level AA)"

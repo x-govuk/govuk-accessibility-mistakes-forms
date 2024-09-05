@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Do not use links in ‘aria-described’ areas like hint text
-description: Fields that hack the GOV.UK pattern for hint text (which should be a paragraph of text only)
+description: Areas of GOV.UK component that use 'aria-described' such as hint text are designed to be a single paragraph of text. Changing this can cause accessibility issues. 
 tags: "Code"
 mistake:
 - description: This example can happen when a question is 'one thing per page' or if multiple things are on a page.

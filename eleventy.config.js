@@ -73,7 +73,7 @@ module.exports = function(eleventyConfig) {
             text: "Sitemap"
           }
     ],
-    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
+    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - view <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
   },
 
                   contentLicence: {

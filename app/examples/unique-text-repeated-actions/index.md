@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Do not forget unique text for repeated actions such as 'Change'
-description: Patterns that use link titles with the same name need extra attention.
+description: Patterns that use link titles with the same name need extra attention to make sure they are still unique for screen readers.
 tags: "Design"
 mistake:
 - link: unique-text-repeated-actions/mistake

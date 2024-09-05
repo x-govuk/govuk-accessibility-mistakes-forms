@@ -6,16 +6,24 @@ includeInBreadcrumbs: true
 title: Project history
 ---
 
+Project history shown from earliest to latest updates.
 
-This project was started by Vicky Teinaki (design) and Lori Thomson (accessibility) in early 2024 as a walkthrough prototype. It was created as a password-protected demo built on the GOV.UK Prototype Kit (more details available on the [accessibility-examples Github code repository](https://github.com/vickytnz/accessibility-examples)).
+## April 2024
 
-Caroine Jarrett has been actively involved in this project since June 2024 giving support on content.
+Project was started by Vicky Teinaki (design) and Lori Thomson (accessibility) as a walkthrough prototype. It was created as a password-protected demo built on the GOV.UK Prototype Kit (repository available on the [accessibility-examples Github code repository](https://github.com/vickytnz/accessibility-examples)) and [shared on Medium](https://medium.com/@vickytnz/side-projects-a-weeknote-starting-22-april-2024-4a62c3efae72). I got [feedback from Adam Liptrot and Caroline Jarrett](https://medium.com/@vickytnz/feedback-a-weeknote-starting-29-april-2024-37d6334a3451).
 
-Thanks to Adam Liptrot for comments (and his related project, the [Pattern Checker Chrome plugin](https://liptrot.org/pattern-checker/).
 
-In August 2024 the website was switched to use the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/).
+## May 2024
+Caroline Jarrett became actively involved in the project.
 
-The first version without a password was released 3 September 2024 with the following examples:
+## August 2024
+
+Project switched from the GOV.UK Prototype Kit to the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/) so that it can be hosted on free flat-content sites such as Github pages.
+
+
+## September 2024
+
+Password protection removed from repository 3 September and moved to the xgov-repo. It had the the following examples:
 
 - complex question
 - form fields, hints and links
@@ -26,3 +34,5 @@ The first version without a password was released 3 September 2024 with the foll
 - tabs
 - unique text with repeated actions
 - accordions
+
+Frankie Roberto added code to help show examples more efficiently.

@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Accordions create extra work
-description: Using accordions for information that can be first tried in other formats.
+description: Accordions can either hide information that needs to be split over pages for easier reading, or unncessarily hide key information that can be written concisely.
 tags: "Design"
 mistake:
 - description: This example can happen when showing information about a user that they need to check.

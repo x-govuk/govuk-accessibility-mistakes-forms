@@ -3,6 +3,9 @@ layout: example
 title: Do not omit autocomplete attributes on input fields
 description: If you are asking for fields that people regularly complete, autocomplete helps them save time by helping their web browser guess the response.
 tags: "Code"
+wcag:
+- text: "WCAG 2.2 1.3.5: Identify Input Purpose (Level AA)"
+  link: https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose
 mistake:
 - description: This example can happen with input fields that include saved information like a username, email address or password. Try this with a browser such as Safari.
   link: input-labels/mistake

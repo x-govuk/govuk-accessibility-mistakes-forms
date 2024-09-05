@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Make sure that answers are connected to a question
-description: Input fields separated too far from the initial question cause barriers.
+description: Input fields separated too far from the initial question cause barriers for users who may struggle dto remember the question.
 tags: "Design"
 mistake:
     - description: This example can happen when showing information about a user that they need to check.

@@ -6,7 +6,7 @@ tags: "Code"
 mistake:
 - description: This example can happen when showing information about a user that they need to check.
   link: list/mistake
-  reason: This is coded as a table rather than a definition list. Table are far more 'noisy' for screen reader users as they read out row and columns, and the table caption doubling as a page title may also confuse sighted screen reader users.
+  reason: This is coded as a table rather than a definition list. Tables are far more 'noisy' for screen reader users as they read out row and columns. The table caption doubling as a page title can also confuse sighted screen reader users.
 
 improvement:
 - link: list/improved

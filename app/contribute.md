@@ -6,13 +6,16 @@ includeInBreadcrumbs: true
 title: Contribute
 ---
 
+This project is built in the open using the GOV.UK Eleventy plugin.
 
-If you have comments, questions, or would like to contribute, then [join us on our GitHub repository](https://github.com/vickytnz/govuk-accessibility-mistakes-forms).
 
-## Contributors
+If you have comments, questions, or would like to contribute, then [join us on our GitHub repository](https://github.com/x-govuk/govuk-accessibility-mistakes-forms).
 
-Built by Vicky Teinaki.
+## Contributor list
+Contributors listed from oldest to newest:
 
-Content support from: Caroline Jarrett, Lori Thomson. Extra guidance from Adam Liptrot, Ed Horsford.
-
-Hosted by Vicky Teinaki.
+- Vicky Teinaki
+- Lori Thomson
+- Adam Liptrot
+- Caroline Jarrett
+- Frankie Roberto 
