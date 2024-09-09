@@ -34,5 +34,6 @@ Password protection removed from repository 3 September and moved to the xgov-re
 - tabs
 - unique text with repeated actions
 - accordions
+- breaking expected form groupings
 
 Frankie Roberto added code to help show examples more efficiently.
