@@ -13,6 +13,7 @@ $govuk-page-width: 1100px;
 // Add extra styles here
 
 @import "node_modules/govuk-frontend/dist/govuk/all";
+@import "app/_components/example/example";
 
 /*
 *, body, h1, h2, h3, h4, h5, p, a, span, .govuk-heading-m, .govuk-heading-l, .govuk-heading-xl, .govuk-heading-s, .govuk-list, .govuk-fieldset__legend, .govuk-label, .govuk-hint,  html, body, form, fieldset, table, tr, td, img, button  {
@@ -87,81 +88,7 @@ padding-top: 11px !important;
 }
 
 
-/// app examples
-// Example styles
-.app-example-wrapper {
-  @include govuk-responsive-margin(6, "top");
-  @include govuk-responsive-margin(6, "bottom");
-  border: 1px solid $govuk-border-colour;
-  border-top: 0;
-  max-width: auto;
-  // max-width: 38em; //added to match with 'prose' examples
 
-}
-
-.app-example {
-  @include govuk-font-size($size: 16);
-  position: relative;
-  border-top: 1px solid $govuk-border-colour;
-  // Add a 'checkerboard' background
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==")
-    repeat;
-}
-
-.app-example--tabs {
-  @include govuk-responsive-margin(0, "bottom");
-}
-
-.app-example__toolbar {
-  padding: 10px;
-  border-bottom: 1px solid $govuk-border-colour;
-  background: $govuk-body-background-colour;
-}
-
-.app-example__frame {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border: 0;
-  border-right: 1px solid $govuk-border-colour;
-  background: govuk-colour("white");
-}
-
-// Default size
-.app-example__frame,
-.app-example__frame--xs {
-  height: 150px;
-}
-
-.app-example__frame--s {
-  height: 250px;
-}
-
-.app-example__frame--m {
-  height: 350px;
-}
-
-.app-example__frame--l {
-  height: 450px;
-}
-
-.app-example__frame--xl {
-  height: 550px;
-}
-
-.app-example__frame--resizable {
-  min-width: 230px;
-  min-height: govuk-spacing(6) * 2;
-  overflow: auto;
-  transform: translate3d(0, 0, 0);
-  @include govuk-media-query($from: desktop) {
-    resize: both;
-  }
-}
-
-.app-example__code {
-  position: relative;
-}
 
 
 // =========================================================
@@ -344,39 +271,6 @@ padding-top: 11px !important;
   background-color: #ffbf48;
 }
 
-
-.app-example__frame {
-  background: govuk-colour("white");
-  border: 0;
-  border-right: 1px solid $govuk-border-colour;
-  display: block;
-  max-width: calc(100% - govuk-spacing(4) * 2);
-  padding: govuk-spacing(4);
-  resize: both;
-  width: 100%;
-}
-
-.app-example__new-window {
-  @include govuk-font($size: 16);
-}
-
-// stylelint-disable declaration-no-important
-.app-example__toolbar {
-  background: $govuk-body-background-colour;
-  border-top: 1px solid $govuk-border-colour;
-  max-width: initial !important;
-  padding: govuk-spacing(2);
-}
-
-.app-example__tabs {
-  .govuk-tabs__panel[id$="-preview"] {
-    padding: 0;
-  }
-
-  .x-govuk-code {
-    margin: 0;
-  }
-}
 
 
 // overwriting mistakes

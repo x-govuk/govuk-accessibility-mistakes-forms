@@ -1,0 +1,34 @@
+<div class="govuk-tabs app-example__tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#{{ link | replace("/", "-") }}-preview">
+        Example
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#{{ link | replace("/", "-") }}-html">
+        HTML
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#{{ link | replace("/", "-") }}-nunjucks">
+        Nunjucks
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="{{ link | replace("/", "-") }}-preview">
+    <iframe class="app-example__frame" data-module="app-example-frame" src="../{{ link }}"></iframe>
+    <p class="app-example__toolbar">
+      <a class="app-example__new-window" href="../{{ link }}" target="_blank">Open this example in a new tab</a>
+    </p>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ link | replace("/", "-") }}-html">
+    {{ getHtmlCode(link) }}
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ link | replace("/", "-") }}-nunjucks">
+    {{ getNunjucksCode(link) }}
+  </div>
+</div>
