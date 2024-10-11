@@ -20,7 +20,6 @@ $govuk-page-width: 1100px;
   font-family: "Helvetica", "Arial", sans-serif !important;
 } */
 
-
 /*
 
 .govuk-button {
@@ -59,37 +58,31 @@ padding-top: 11px !important;
 */
 /* end fixing app header issues  */
 
-
-
-
 .option-toggle {
-    width: 100%;
-    text-align: right;
-    display: inline-block;
+  width: 100%;
+  text-align: right;
+  display: inline-block;
 }
 
-.option-toggle-select__list{
-    float: right;
-    margin-top: 1em;
-    text-align: right;
+.option-toggle-select__list {
+  float: right;
+  margin-top: 1em;
+  text-align: right;
 }
 
 .option-toggle-select__list-item {
-    display: inline-block;
+  display: inline-block;
 }
 
-.option-toggle-select__list-item:not(:last-child):after, .footer-links-list:not(:last-child):after {
-    border-right: .09375em solid #0b0c0c;
-    content: "";
-    display: inline-block;
-    height: 1em;
-    position: relative;
-    top: .1875em;
+.option-toggle-select__list-item:not(:last-child):after,
+.footer-links-list:not(:last-child):after {
+  border-right: 0.09375em solid #0b0c0c;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  top: 0.1875em;
 }
-
-
-
-
 
 // =========================================================
 // Tabs (desktop)
@@ -249,29 +242,25 @@ padding-top: 11px !important;
 .app-tabs__container pre code {
   outline: 1px solid transparent;
   color: $govuk-text-colour;
-/*  background-color: govuk-colour("light-grey"); */
+  /*  background-color: govuk-colour("light-grey"); */
 }
 
 .govuk-main-wrapper {
   padding-bottom: 0;
 }
 
-
 // example for mistakes
 
-
-.old-frontend a:focus, .old-frontend govuk-link:focus {
-	background-color: #ffbf48;
+.old-frontend a:focus,
+.old-frontend govuk-link:focus {
+  background-color: #ffbf48;
 }
-
 
 .old-frontend .govuk-skip-link:focus {
   outline: 3px solid #ffbf48;
   outline-offset: 0;
   background-color: #ffbf48;
 }
-
-
 
 // overwriting mistakes
 
