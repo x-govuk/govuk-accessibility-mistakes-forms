@@ -24,6 +24,6 @@ Without programmatic context, autofill can’t guess as to what the field is.
 
 ## Improved version
 
-{{ appExample("input-labels/improved") }}
+{{ appExample("input-labels/improvement") }}
 
 Using autocomplete means that any saved fields are more likely to be correctly suggested.

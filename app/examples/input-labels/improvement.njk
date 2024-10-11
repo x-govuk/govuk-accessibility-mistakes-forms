@@ -1,7 +1,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 <form class="govuk-!-width-two-thirds" action="#" method="post">
-  <span class="govuk-caption-l">Original version</span>
+  <span class="govuk-caption-l">Improved version</span>
 
   <h1 class="govuk-heading-l">
     Your name
@@ -15,7 +15,9 @@
       text: "This must be your legal first name or names"
     },
     id: "first-name",
-    name: "firstName"
+    name: "firstName",
+    autocomplete: "first-name",
+    spellcheck: false
   }) }}
 
   {{ govukInput({
@@ -23,7 +25,9 @@
       text: "Middle name or names (if you have them)"
     },
     id: "middle-names",
-    name: "middleName"
+    name: "middleName",
+    autocomplete: "additional-name",
+    spellcheck: false
   }) }}
 
   {{ govukInput({
@@ -31,7 +35,9 @@
       text: "Family name or names"
     },
     id: "lastName",
-    name: "lastName"
+    name: "lastName",
+    autocomplete: "family-name",
+    spellcheck: false
   }) }}
 
   {{ govukButton({
