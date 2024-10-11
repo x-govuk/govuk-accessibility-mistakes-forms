@@ -8,7 +8,7 @@ related:
       href: https://design-system.service.gov.uk/components/tabs/#when-not-to-use-this-component
     - text: Don't be afraid of the big long page by Amy Hupe and Caroline Jarrett
       href: https://amyhupe.co.uk/articles/dont-be-afraid-of-the-big-long-page/
-    - text: Definition lists information in the GOV.UK Design system
+    - text: Definition lists information in the GOV.UK Design System
       href: https://design-system.service.gov.uk/components/summary-list/
     - text: Tabs, Used Right on NN/g
       href: https://www.nngroup.com/articles/tabs-used-right/

@@ -4,7 +4,7 @@ description: Some groupings like username and password are so commonly expected 
 related:
   title: Related links
   items:
-    - text: Complex question pages on the GOV.UK Design system
+    - text: Complex question pages on the GOV.UK Design System
       href: https://design-system.service.gov.uk/patterns/question-pages/#asking-complex-questions-without-using-hint-text
 ---
 

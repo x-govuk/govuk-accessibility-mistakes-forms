@@ -6,7 +6,7 @@ related:
   items:
     - text: Tables information in the GOV.UK Design System
       href: https://design-system.service.gov.uk/components/table/
-    - text: Definition lists information in the GOV.UK Design system
+    - text: Definition lists information in the GOV.UK Design System
       href: https://design-system.service.gov.uk/components/summary-list/
 ---
 
