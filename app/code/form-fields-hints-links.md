@@ -18,7 +18,7 @@ related:
 
 This example can happen when a question is ‘one thing per page’ or if multiple things are on a page.
 
-{{ appExample("form-fields-hints-links/mistake") }}
+{{ appExample("form-fields-hints-links/mistake-1") }}
 
 Hints (information between the input legend and the input field) must be simple without complex formatting or links. If extra formatting like lists and links are put in the hint area between an input legend and the input, a screen reader may not read them correctly.
 
@@ -28,6 +28,6 @@ Hints within input fields will not be read by the screen reader
 
 ## Improved version
 
-{{ appExample("form-fields-hints-links/improved") }}
+{{ appExample("form-fields-hints-links/improvement") }}
 
 Simple hints will be read out as expected by screen readers. If the input needs significant guidance and links, it should be rewritten as a complex question.
