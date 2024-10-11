@@ -28,6 +28,6 @@ Tabs, like accordions, can be a symptom of unstructured content design. It also 
 
 ## Improved version
 
-{{ appExample("tabs/improved") }}
+{{ appExample("tabs/improvement") }}
 
 Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
