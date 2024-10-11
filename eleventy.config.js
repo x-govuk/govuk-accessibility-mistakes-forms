@@ -3,7 +3,6 @@ const fs = require('node:fs')
 const matter = require('gray-matter')
 const nunjucks = require('nunjucks')
 const beautify = require('js-beautify')
-const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 const getComponentContent = (componentName) => {
   const componentPath = `app/examples/${componentName}.njk`
@@ -15,7 +14,6 @@ const getComponentContent = (componentName) => {
 
 module.exports = function (eleventyConfig) {
   // Register the plugin
-  eleventyConfig.addPlugin(syntaxHighlightPlugin)
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',

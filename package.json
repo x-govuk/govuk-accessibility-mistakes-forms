@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@x-govuk/govuk-eleventy-plugin": "^6.2.5",
     "gray-matter": "^4.0.3",
     "iframe-resizer": "^4.3.9",
