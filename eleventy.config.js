@@ -120,6 +120,8 @@ module.exports = function (eleventyConfig) {
     return markdown(`\`\`\`html\n${htmlCode}\n\`\`\``)
   })
 
+  // Passthrough
+  eleventyConfig.addPassthroughCopy('./app/assets')
   eleventyConfig.addPassthroughCopy({
     './node_modules/iframe-resizer/js/*.js': './assets'
   })

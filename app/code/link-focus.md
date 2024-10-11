@@ -8,7 +8,7 @@ related:
       href: https://accessibility-manual.dwp.gov.uk/guidance-for-your-job-role/interaction-designer#use-sufficient-colour-contrast
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 > This mistake can mean a failure of [WCAG 2.2 2.4.7: Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
 
@@ -20,7 +20,7 @@ related:
 
 This example is most likely to happen if the GOV.UK Frontend is being rebuilt in a codebase as an abstraction rather than using default templates.
 
-{{ example("link-focus/mistake") }}
+{{ appExample("link-focus/mistake") }}
 
 Not having `govuk-link` style or similar may mean a link does not have have sufficient contrast in the focus state.
 
@@ -28,12 +28,12 @@ Not having `govuk-link` style or similar may mean a link does not have have suff
 
 If a service has not been updated for a while, its frontend may be out of date.
 
-{{ example("link-focus/mistake-2") }}
+{{ appExample("link-focus/mistake-2") }}
 
 Earlier versions of GOV.UK Frontend used a focus style that did not meet colour contrast standards. It has since been updated.
 
 ## Improved version
 
-{{ example("link-focus/improved") }}
+{{ appExample("link-focus/improved") }}
 
 The link now has a clear and accessible focus when tabbed. This fix is done by adding `class="govuk-link"` to the link and making sure that the service is using a recent version of GOV.UK Frontend.

@@ -10,7 +10,7 @@ related:
       href: https://design-system.service.gov.uk/get-started/labels-legends-headings/
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 [[toc]]
 
@@ -18,16 +18,16 @@ related:
 
 This example can happen when a question is ‘one thing per page’ or if multiple things are on a page.
 
-{{ example("form-fields-hints-links/mistake") }}
+{{ appExample("form-fields-hints-links/mistake") }}
 
 Hints (information between the input legend and the input field) must be simple without complex formatting or links. If extra formatting like lists and links are put in the hint area between an input legend and the input, a screen reader may not read them correctly.
 
-{{ example("form-fields-hints-links/mistake-2") }}
+{{ appExample("form-fields-hints-links/mistake-2") }}
 
 Hints within input fields will not be read by the screen reader
 
 ## Improved version
 
-{{ example("form-fields-hints-links/improved") }}
+{{ appExample("form-fields-hints-links/improved") }}
 
 Simple hints will be read out as expected by screen readers. If the input needs significant guidance and links, it should be rewritten as a complex question.

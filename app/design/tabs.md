@@ -14,7 +14,7 @@ related:
       href: https://www.nngroup.com/articles/tabs-used-right/
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 [[toc]]
 
@@ -22,12 +22,12 @@ related:
 
 Tabs can be mistakenly used for scenarios where people need to compare details across tabs.
 
-{{ example("tabs/mistake") }}
+{{ appExample("tabs/mistake") }}
 
 Tabs, like accordions, can be a symptom of unstructured content design. It also does not act as a tab in mobile view so is a unequal experience.
 
 ## Improved version
 
-{{ example("tabs/improved") }}
+{{ appExample("tabs/improved") }}
 
 Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.

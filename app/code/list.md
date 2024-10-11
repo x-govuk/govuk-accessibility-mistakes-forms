@@ -10,7 +10,7 @@ related:
       href: https://design-system.service.gov.uk/components/summary-list/
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 [[toc]]
 
@@ -18,12 +18,12 @@ related:
 
 This example can happen when showing information about a user that they need to check.
 
-{{ example("list/mistake") }}
+{{ appExample("list/mistake") }}
 
 This is coded as a table rather than a definition list. Tables are far more ‘noisy’ for screen reader users as they read out row and columns. The table caption doubling as a page title can also confuse sighted screen reader users.
 
 ## Improved version
 
-{{ example("list/improved") }}
+{{ appExample("list/improved") }}
 
 Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.

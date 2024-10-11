@@ -12,7 +12,7 @@ related:
       href: https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 [[toc]]
 
@@ -20,12 +20,12 @@ related:
 
 This example can happen when showing information about a user that they need to check.
 
-{{ example("work-accordions/mistake") }}
+{{ appExample("work-accordions/mistake") }}
 
 Accordions hide key information that may be necessary for everyone. While there may be uses for accordions in some scenarios like case working systems, generally it is better to start by either no content and adding when there is a need, or all content and using headers, links and occasional details text.
 
 ## Improved version
 
-{{ example("work-accordions/improved") }}
+{{ appExample("work-accordions/improved") }}
 
 Showing information as a start helps everyone get the information - if there is too much information then the page needs to be redesigned.

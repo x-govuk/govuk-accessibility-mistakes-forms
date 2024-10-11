@@ -8,7 +8,7 @@ related:
       href: https://www.w3.org/WAI/WCAG22/Techniques/failures/F96.html
 ---
 
-{% from "example/macro.njk" import example %}
+{% from "example/macro.njk" import appExample %}
 
 [[toc]]
 
@@ -16,7 +16,7 @@ related:
 
 If patterns like ‘check answers’ are either coded bespoke (rather than using the GOV.UK Frontend macros) or not checked with screen readers, it may miss content needed for screen readers.
 
-{{ example("unique-text-repeated-actions/mistake") }}
+{{ appExample("unique-text-repeated-actions/mistake") }}
 
 This makes it hard for screen reader users to know the difference between links, and also breaks WCAG standards.
 
@@ -24,6 +24,6 @@ This makes it hard for screen reader users to know the difference between links,
 
 The default macro has the necessary hidden text for links that are otherwise shown with the same text.
 
-{{ example("unique-text-repeated-actions/improved") }}
+{{ appExample("unique-text-repeated-actions/improved") }}
 
 This correctly gives different distinctions for the links to screen reader users.
