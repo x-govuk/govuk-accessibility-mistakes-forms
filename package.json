@@ -1,9 +1,17 @@
 {
-  "name": "vickytnz-govuk-eleventy",
+  "name": "govuk-fix-accessibility-mistakes",
   "version": "1.0.0",
-  "description": "Test of govuk eleventy",
-  "main": "eleventy.config.js",
+  "description": "This is a project to show common mistakes and improvements for forms and other interactions designed using GOV.UK Frontend.",
+  "keywords": [
+    "govuk",
+    "accessibility"
+  ],
+  "homepage": "https://github.com/x-govuk/govuk-accessibility-mistakes-forms/",
+  "bugs": {
+    "url": "https://github.com/x-govuk/govuk-accessibility-mistakes-forms/issues"
+  },
   "license": "MIT",
+  "main": "eleventy.config.js",
   "scripts": {
     "prebuild": "rimraf _site",
     "build": "eleventy",

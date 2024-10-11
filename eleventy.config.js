@@ -25,8 +25,8 @@ module.exports = function (eleventyConfig) {
     opengraphImageUrl:
       'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
     feedUrl: 'feed.xml',
-    homeKey: 'Fix common accessibility mistakes in forms',
-    titleSuffix: 'Fix common accessibility mistakes in forms',
+    homeKey: 'Fix Common Accessibility Mistakes',
+    titleSuffix: 'Fix Common Accessibility Mistakes',
     parentSite: {
       url: 'https://x-govuk.github.io/#projects',
       name: 'All X-GOVUK projects'
@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
     headingPermalinks: true,
     header: {
       logotype: 'x-govuk',
-      productName: 'Fix common accessibility mistakes in forms',
+      productName: 'Fix Common Accessibility Mistakes',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap',
