@@ -1,121 +1,64 @@
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-  {{ govukNotificationBanner({
-    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
-    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
-  }) if reviewed and reviewAgain }}
-
-
-
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
-  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
-
-
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-
-
-
-        <table class="govuk-table">
-
-          <caption class="govuk-table__caption govuk-table__caption--l">Check previous details</caption>
-
-
-          <tbody class="govuk-table__body">
-
-
-            <tr class="govuk-table__row">
-
-
-
-              <th scope="row" class="govuk-table__header">Name</th>
-
-
-
-
-              <td class="govuk-table__cell">Sarah Philips</td>
-
-
-            </tr>
-
-
-
-            <tr class="govuk-table__row">
-
-
-
-              <th scope="row" class="govuk-table__header">Date of birth</th>
-
-
-
-
-              <td class="govuk-table__cell">5 January 1978</td>
-
-
-            </tr>
-
-
-
-            <tr class="govuk-table__row">
-
-
-
-              <th scope="row" class="govuk-table__header">Address</th>
-
-
-
-
-              <td class="govuk-table__cell">72 Guild Street<br>London<br>SE23 6FH</td>
-
-
-            </tr>
-
-
-
-            <tr class="govuk-table__row">
-
-
-
-              <th scope="row" class="govuk-table__header">Contact details</th>
-
-
-
-
-              <td class="govuk-table__cell"><p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p></td>
-
-
-            </tr>
-
-
-          </tbody>
-        </table>
-
-        <div class="govuk-form-group">
-
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Are these details correct?
-          </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="details" name="details" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="details">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="details-2" name="details" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="details-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-
-      </div>
-
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+<span class="govuk-caption-l">Original version</span>
+
+{{ govukTable({
+  caption: "Check previous details",
+  captionClasses: "govuk-table__caption--l",
+  rows: [
+    [
+      {
+        text: "Name"
+      },
+      {
+        text: "Sarah Philips"
+      }
+    ],
+    [
+      {
+        text: "Date of birth"
+      },
+      {
+        text: "5 January 1978"
+      }
+    ],
+    [
+      {
+        text: "Address"
+      },
+      {
+        html: "72 Guild Street<br>London<br>SE23 6FH"
+      }
+    ],
+    [
+      {
+        text: "Contact details"
+      },
+      {
+        html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+      }
+    ]
+  ]
+}) }}
+
+{{ govukRadios({
+  fieldset: {
+    legend: {
+      classes: "govuk-fieldset__legend--m",
+      text: "Are these details correct?"
+    }
+  },
+  name: "details",
+  items: [
+    {
+      text: "Yes"
+    },
+    {
+      text: "No"
+    }
+  ]
+}) }}
 
 {{ govukButton({
   text: "Save and continue"

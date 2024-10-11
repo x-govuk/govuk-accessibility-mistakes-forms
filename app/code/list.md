@@ -24,6 +24,6 @@ This is coded as a table rather than a definition list. Tables are far more ‘n
 
 ## Improved version
 
-{{ appExample("list/improved") }}
+{{ appExample("list/improvement") }}
 
 Using a definition list means that what is visually shown on the page is more aligned with what is read out on a screen reader.
