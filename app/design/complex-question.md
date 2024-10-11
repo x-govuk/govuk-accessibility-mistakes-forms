@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Make sure that answers are connected to a question
 description: Input fields separated too far from the initial question cause barriers for users who struggled to remember the question.
-tags: "Design"
 related:
   title: Related links
   items:

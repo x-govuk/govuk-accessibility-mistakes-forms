@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Accordions create extra work
 description: Accordions can either hide information that needs to be split over pages for easier reading, or unnecessarily hide key information that can be written concisely.
-tags: "Design"
 related:
   title: Related links
   items:

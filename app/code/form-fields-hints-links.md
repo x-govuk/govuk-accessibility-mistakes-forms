@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Do not use links in aria-described areas like hint text
 description: Areas of GOV.UK component that use `aria-described` such as hint text are designed to be a single paragraph of text. Changing this can cause accessibility issues. 
-tags: "Code"
 related:
   title: Related links
   items:

@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Do not use a question as a heading unless a user can answer it on the page
 description: If you put a question in a form page, it needs to have a way for a user to answer it.
-tags: "Design"
 related:
   title: Related links
   items:

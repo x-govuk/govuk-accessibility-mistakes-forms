@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Avoid tabs for complex content
 description: The primary use case for tabs is when one set of information is far more important than others and does not need to be compared.
-tags: "Design"
 related:
   title: Related links
   items:

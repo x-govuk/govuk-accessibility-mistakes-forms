@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Do not omit autocomplete attributes on input fields
 description: If you are asking for fields that people regularly complete, autocomplete helps them save time by helping their web browser guess the response.
-tags: "Code"
 related:
   title: Related links
   items:

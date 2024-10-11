@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Do not code lists as tables
 description: Using tables instead of definition lists creates noise for screen reader users.
-tags: "Code"
 related:
   title: Related links
   items:

@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Do not split up expected form groupings
 description: Some groupings like username and password are so commonly expected that both people and browsers can struggle if they are changed.
-tags: "Design"
 related:
   title: Related links
   items:
