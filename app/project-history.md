@@ -12,14 +12,13 @@ Project history shown from earliest to latest updates.
 
 Project was started by Vicky Teinaki (design) and Lori Thomson (accessibility) as a walkthrough prototype. It was created as a password-protected demo built on the GOV.UK Prototype Kit (repository available on the [accessibility-examples Github code repository](https://github.com/vickytnz/accessibility-examples)) and [shared on Medium](https://medium.com/@vickytnz/side-projects-a-weeknote-starting-22-april-2024-4a62c3efae72). I got [feedback from Adam Liptrot and Caroline Jarrett](https://medium.com/@vickytnz/feedback-a-weeknote-starting-29-april-2024-37d6334a3451).
 
-
 ## May 2024
+
 Caroline Jarrett became actively involved in the project.
 
 ## August 2024
 
 Project switched from the GOV.UK Prototype Kit to the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/) so that it can be hosted on free flat-content sites such as Github pages.
-
 
 ## September 2024
 
