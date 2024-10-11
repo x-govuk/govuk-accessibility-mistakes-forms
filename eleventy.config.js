@@ -3,11 +3,7 @@ const fs = require('node:fs')
 const matter = require('gray-matter')
 const nunjucks = require('nunjucks')
 const beautify = require('js-beautify')
-
-/*
-const path = require('path')
-const { readFileSync } = require('fs') */
-const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
+const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
 
 const getComponentContent = (componentName) => {
   const componentPath = `app/examples/${componentName}.njk`
@@ -17,11 +13,10 @@ const getComponentContent = (componentName) => {
   return content
 }
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Register the plugin
-  eleventyConfig.addPlugin(syntaxHighlightPlugin);
+  eleventyConfig.addPlugin(syntaxHighlightPlugin)
   eleventyConfig.addPlugin(govukEleventyPlugin, {
- // add customisations here - uncomment next areas for examples
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',
       shortcut:
@@ -35,10 +30,10 @@ module.exports = function(eleventyConfig) {
     homeKey: 'Fix common accessibility mistakes in forms',
     titleSuffix: 'Fix common accessibility mistakes in forms',
     parentSite: {
-     url: 'https://x-govuk.github.io/#projects',
-     name: 'All X-GOVUK projects'
-   },
-   url:
+      url: 'https://x-govuk.github.io/#projects',
+      name: 'All X-GOVUK projects'
+    },
+    url:
       process.env.GITHUB_ACTIONS &&
       'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/',
     headingPermalinks: true,
@@ -48,44 +43,34 @@ module.exports = function(eleventyConfig) {
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap',
-        label: "Search examples"
+        label: 'Search examples'
       }
     },
-
-/*     navigation: {
-      visuallyHiddenTitle: "Menu",
-      items: [ {text: "Examples", href: "/examples/index"  } ]
-    }, */
-
     footer: {
       meta: {
         items: [
           {
-            href: "/accessibility-statement",
-            text: "Accessibility statement"
+            href: '/accessibility-statement',
+            text: 'Accessibility statement'
           },
           {
-            href: "/cookies",
-            text: "Cookies"
+            href: '/cookies',
+            text: 'Cookies'
           },
           {
-            href: "/sitemap",
-            text: "Sitemap"
+            href: '/sitemap',
+            text: 'Sitemap'
           }
-    ],
-    html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - view <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
-  },
-
-                  contentLicence: {
-                    html: 'This site  is licenced under a Creative Commons <a class="govuk-footer__link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike</a> 4.0 International license'
-          },
-          copyright: {
-            text: '@X-GOVUK'
-          }
-        }
-
-
-
+        ],
+        html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - view <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
+      },
+      contentLicence: {
+        html: 'This site  is licenced under a Creative Commons <a class="govuk-footer__link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike</a> 4.0 International license'
+      },
+      copyright: {
+        text: '@X-GOVUK'
+      }
+    }
   })
 
   /**
@@ -108,7 +93,6 @@ module.exports = function(eleventyConfig) {
     return markdown(`\`\`\`js\n${nunjucksCode}\n\`\`\``)
   })
 
-
   /**
    * Fetch Nunjucks code for given `componentName` and return an HTML string.
    * @param {string} componentName - Name of component
@@ -122,7 +106,8 @@ module.exports = function(eleventyConfig) {
       './node_modules/govuk-frontend/dist',
       './node_modules/@x-govuk/govuk-prototype-components'
     ])
-    // const html = content
+
+    // Render HTML
     const html = nunjucksEnv.renderString(content).trim()
 
     // Beautify HTML code
@@ -141,21 +126,18 @@ module.exports = function(eleventyConfig) {
     './node_modules/iframe-resizer/js/*.js': './assets'
   })
 
-// Filters
-
+  // Filters
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
-      // The folder where all your content will live:
       input: 'app',
-      // Use layouts from the plugin
-      //layouts: '../node_modules/@x-govuk/govuk-eleventy-plugin/layouts',
-      layouts: "_layouts",
+      layouts: '_layouts',
       includes: '_components'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS ? '/govuk-accessibility-mistakes-forms/' : '/'
-
+    pathPrefix: process.env.GITHUB_ACTIONS
+      ? '/govuk-accessibility-mistakes-forms/'
+      : '/'
   }
-};
+}
