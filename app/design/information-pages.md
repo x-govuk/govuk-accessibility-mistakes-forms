@@ -24,7 +24,7 @@ In this example, 'can you apply' is just a heading. The only options are to 'con
 
 If possible, ask multiple conditions with multiple questions that people can work through.
 
-{{ appExample("information-pages/improved") }}
+{{ appExample("information-pages/improvement-1") }}
 
 Rewriting the header to be a sentence makes it clear that the user does not have to answer anything.
 
@@ -32,6 +32,6 @@ Rewriting the header to be a sentence makes it clear that the user does not have
 
 If the question cannot be made into multiple input fields (for example because the information cannot be used again, therefore breaking other WCAG rules) the question can be changed into a complex question.
 
-{{ appExample("information-pages/improved-2") }}
+{{ appExample("information-pages/improvement-2") }}
 
 This still allows the page to have a question that can be answered.
