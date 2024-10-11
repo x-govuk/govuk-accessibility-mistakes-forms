@@ -8,7 +8,14 @@
     "prebuild": "rimraf _site",
     "build": "eleventy",
     "start": "eleventy --serve --quiet",
-    "test": "standard"
+    "lint:prettier": "prettier . --check",
+    "lint:prettier:fix": "prettier . --write",
+    "lint:js": "eslint '**/*.js'",
+    "lint:js:fix": "eslint '**/*.js' --fix",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:scss:fix": "stylelint '**/*.scss' --fix",
+    "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -20,7 +27,17 @@
     "rimraf": "^6.0.0"
   },
   "devDependencies": {
-    "standard": "^17.1.0"
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.0",
+    "prettier": "^3.1.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-gds": "^2.0.0",
+    "stylelint-order": "^6.0.4"
   },
   "private": true,
   "engines": {
