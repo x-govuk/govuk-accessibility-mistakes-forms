@@ -18,7 +18,7 @@ related:
 
 This example can happen when showing information about a user that they need to check.
 
-{{ appExample("complex-question/mistake") }}
+{{ appExample("complex-question/mistake-1") }}
 
 A complex question must have a header, information and then the question - without this it is difficult for screen readers to show that there is context or for people with memory issues to remember what is being asked.
 
@@ -34,12 +34,12 @@ This example puts links between the fieldset and the radio buttons, meaning scre
 
 ### Improvement 1
 
-{{ appExample("complex-question/improved") }}
+{{ appExample("complex-question/improvement-1") }}
 
 Structuring the page to have header, details and question helps screen readers, audio announcers and general ease of memory. Links will also be announced by a screen reader before the question.
 
 ### Improvement 2
 
-{{ appExample("complex-question/improved-2") }}
+{{ appExample("complex-question/improvement-2") }}
 
 This example reintroduced a clear fieldset header for the radio buttons, and also changes the existing fields to separate searching for an existing result with choosing one based on the previous information.

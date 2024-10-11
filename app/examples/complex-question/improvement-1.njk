@@ -1,0 +1,36 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Improved version</span>
+
+  <h1 class="govuk-heading-l">
+    Your Self Assessment Unique Taxpayer Reference (UTR)
+  </h1>
+
+  <p class="govuk-body">
+    You can find it in your Personal Tax Account, the HMRC app or on tax
+    returns and other documents from HMRC. It might be called ‘reference’,
+    ‘UTR’ or ‘official use’.
+  </p>
+
+  <p class="govuk-body">
+    <a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Get more help to find your UTR (opens in new tab)</a>
+  </p>
+
+  {{ govukInput({
+    label: {
+      classes: "govuk-label--m",
+      text: "What is your Self Assessment UTR?"
+    },
+    hint: {
+      text: "Your UTR can be 10 or 13 digits long."
+    },
+    classes: "govuk-input--width-10",
+    id: "utr",
+    name: "utr"
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>
