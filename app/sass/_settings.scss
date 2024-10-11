@@ -248,24 +248,3 @@ padding-top: 11px !important;
 .govuk-main-wrapper {
   padding-bottom: 0;
 }
-
-// example for mistakes
-
-.old-frontend a:focus,
-.old-frontend govuk-link:focus {
-  background-color: #ffbf48;
-}
-
-.old-frontend .govuk-skip-link:focus {
-  outline: 3px solid #ffbf48;
-  outline-offset: 0;
-  background-color: #ffbf48;
-}
-
-// overwriting mistakes
-
-.old-frontend .govuk-skip-link:focus {
-  outline: 3px solid #ffbf48;
-  outline-offset: 0;
-  background-color: #ffbf48;
-}

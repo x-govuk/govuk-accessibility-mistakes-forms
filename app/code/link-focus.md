@@ -20,7 +20,7 @@ related:
 
 This example is most likely to happen if the GOV.UK Frontend is being rebuilt in a codebase as an abstraction rather than using default templates.
 
-{{ appExample("link-focus/mistake") }}
+{{ appExample("link-focus/mistake-1") }}
 
 Not having `govuk-link` style or similar may mean a link does not have have sufficient contrast in the focus state.
 
@@ -34,6 +34,6 @@ Earlier versions of GOV.UK Frontend used a focus style that did not meet colour 
 
 ## Improved version
 
-{{ appExample("link-focus/improved") }}
+{{ appExample("link-focus/improvement") }}
 
 The link now has a clear and accessible focus when tabbed. This fix is done by adding `class="govuk-link"` to the link and making sure that the service is using a recent version of GOV.UK Frontend.
