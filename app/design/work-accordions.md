@@ -26,6 +26,6 @@ Accordions hide key information that may be necessary for everyone. While there 
 
 ## Improved version
 
-{{ appExample("work-accordions/improved") }}
+{{ appExample("work-accordions/improvement") }}
 
 Showing information as a start helps everyone get the information - if there is too much information then the page needs to be redesigned.

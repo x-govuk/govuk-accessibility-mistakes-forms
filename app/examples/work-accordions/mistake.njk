@@ -1,56 +1,44 @@
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+<span class="govuk-caption-l">Original version</span>
 
+<h1 class="govuk-heading-l">
+  Examples of complex information
+</h1>
 
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-
-
-        <span class="govuk-heading-l">
-        Examples of complex information
-
-              </span>
-        <form class="form" action="/content/original-explanation" method="post">
-
-
-
-
-          {{ govukAccordion({
-            id: "accordion-default",
-            items: [
-              {
-                heading: {
-                  text: "Writing well for the web"
-                },
-                content: {
-                  html: '<p class="govuk-body">This is the content for Writing well for the web.</p>'
-                }
-              },
-              {
-                heading: {
-                  text: "Writing well for specialists"
-                },
-                content: {
-                  html: '<p class="govuk-body">This is the content for Writing well for specialists.</p>'
-                }
-              },
-              {
-                heading: {
-                  text: "Know your audience"
-                },
-                content: {
-                  html: '<p class="govuk-body">This is the content for Know your audience.</p>'
-                }
-              },
-              {
-                heading: {
-                  text: "How people read"
-                },
-                content: {
-                  html: '<p class="govuk-body">This is the content for How people read.</p>'
-                }
-              }
-            ]
-          }) }}
-
-              </form>
+{{ govukAccordion({
+  id: "examples",
+  items: [
+    {
+      heading: {
+        text: "Writing well for the web"
+      },
+      content: {
+        html: '<p class="govuk-body">This is the content for Writing well for the web.</p>'
+      }
+    },
+    {
+      heading: {
+        text: "Writing well for specialists"
+      },
+      content: {
+        html: '<p class="govuk-body">This is the content for Writing well for specialists.</p>'
+      }
+    },
+    {
+      heading: {
+        text: "Know your audience"
+      },
+      content: {
+        html: '<p class="govuk-body">This is the content for Know your audience.</p>'
+      }
+    },
+    {
+      heading: {
+        text: "How people read"
+      },
+      content: {
+        html: '<p class="govuk-body">This is the content for How people read.</p>'
+      }
+    }
+  ]
+}) }}
