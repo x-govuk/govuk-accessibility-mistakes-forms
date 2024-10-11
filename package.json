@@ -8,8 +8,6 @@
     "prebuild": "rimraf _site",
     "build": "eleventy",
     "start": "eleventy --serve --quiet",
-    "preserve": "npm run build",
-    "serve": "http-server ./_site",
     "test": "standard"
   },
   "dependencies": {
@@ -19,7 +17,6 @@
     "@x-govuk/govuk-prototype-components": "^3.0.7",
     "file-system": "^2.2.2",
     "gray-matter": "^4.0.3",
-    "http-server": "^14.1.1",
     "iframe-resizer": "^4.3.9",
     "js-beautify": "^1.15.1",
     "rimraf": "^6.0.0",
