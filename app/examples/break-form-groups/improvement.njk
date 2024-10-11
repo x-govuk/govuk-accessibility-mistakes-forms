@@ -2,11 +2,25 @@
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
 <form class="govuk-!-width-two-thirds" action="#" method="post">
-  <span class="govuk-caption-l">Original version</span>
+  <span class="govuk-caption-l">Improved version</span>
 
   <h1 class="govuk-heading-l">
     Log in
   </h1>
+
+  {{ govukInput({
+    label: {
+      text: "Surname"
+    },
+    hint: {
+      text: "This must be the name registered to the account"
+    },
+    classes: "govuk-!-width-one-half",
+    id: "surname",
+    name: "surname",
+    autocomplete: "family-name",
+    spellcheck: false
+  }) }}
 
   {{ govukInput({
     formGroup: {
@@ -28,20 +42,6 @@
   <p class="govuk-body">
     <a class="govuk-link" href="#">I have forgotten my user ID</a>
   </p>
-
-  {{ govukInput({
-    label: {
-      text: "Surname"
-    },
-    hint: {
-      text: "This must be the name registered to the account"
-    },
-    classes: "govuk-!-width-one-half",
-    id: "surname",
-    name: "surname",
-    autocomplete: "family-name",
-    spellcheck: false
-  }) }}
 
   {{ govukPasswordInput({
     formGroup: {

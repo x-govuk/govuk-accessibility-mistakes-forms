@@ -22,6 +22,6 @@ This will not work at all without autocomplete tagging (as mentioned in coding m
 
 ## Improved version
 
-{{ appExample("break-form-groups/improved") }}
+{{ appExample("break-form-groups/improvement") }}
 
 Restructuring the input fields to follow existing form grouping means both people and browsers are more likely to be able to correctly input the fields.
