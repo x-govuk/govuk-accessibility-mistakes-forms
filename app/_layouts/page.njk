@@ -1,12 +1,8 @@
 {% extends "layouts/page.njk" %}
 
-
-{% block content %}
-  {{ appDocumentHeader({
-    title: title | noOrphans
-  }) }}
-
-  {{ appProseScope(content) if content }}
-
-
+{% block scripts %}
+  <script src="/assets/iframeResizer.js"></script>
+  <script>
+    iFrameResize({}, `[data-module="app-example-frame"]`)
+  </script>
 {% endblock %}
