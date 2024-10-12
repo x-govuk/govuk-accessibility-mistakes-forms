@@ -26,7 +26,7 @@
     "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@x-govuk/govuk-eleventy-plugin": "^6.2.5",
     "gray-matter": "^4.0.3",
     "iframe-resizer": "^4.3.9",
@@ -49,5 +49,6 @@
   "private": true,
   "engines": {
     "node": "^20"
-  }
+  },
+  "type": "module"
 }
