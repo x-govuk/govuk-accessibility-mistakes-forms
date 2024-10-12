@@ -28,9 +28,17 @@
     </p>
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ example | replace("/", "-") }}-html">
-    {{ getHtmlCode(example) }}
+
+```html
+{{ getHtmlCode(example) | safe }}
+```
+
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ example | replace("/", "-") }}-nunjucks">
-    {{ getNunjucksCode(example) }}
+
+```njk
+{{ getNunjucksCode(example) | safe }}
+```
+
   </div>
 </div>
