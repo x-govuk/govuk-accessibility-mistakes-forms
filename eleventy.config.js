@@ -22,9 +22,9 @@ module.exports = function (eleventyConfig) {
       touch:
         'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
     },
-    opengraphImageUrl:
-      'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
     feedUrl: 'feed.xml',
+    opengraphImageUrl:
+      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/assets/opengraph-image.png',
     homeKey: 'Fix Common Accessibility Mistakes',
     titleSuffix: 'Fix Common Accessibility Mistakes',
     parentSite: {
