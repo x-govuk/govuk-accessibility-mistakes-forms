@@ -22,7 +22,6 @@ module.exports = function (eleventyConfig) {
       touch:
         'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
     },
-    feedUrl: 'feed.xml',
     opengraphImageUrl:
       'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/assets/opengraph-image.png',
     homeKey: 'Fix Common Accessibility Mistakes',
@@ -60,13 +59,13 @@ module.exports = function (eleventyConfig) {
             text: 'Sitemap'
           }
         ],
-        html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is a new unofficial community project - view <a class="govuk-footer__link" href="/project-history">view project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a>, or how to <a class="govuk-footer__link" href="/contribute">contribute</a>'
+        html: '<strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong>This is an unofficial community project. View <a class="govuk-footer__link" href="/project-history">project history</a>, <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-accessibility-mistakes-forms">source code</a> or find out how to <a class="govuk-footer__link" href="/contribute">contribute</a>.'
       },
       contentLicence: {
-        html: 'This site  is licenced under a Creative Commons <a class="govuk-footer__link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike</a> 4.0 International license'
+        html: 'This site is licenced under a Creative Commons <a class="govuk-footer__link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike</a> 4.0 International license'
       },
       copyright: {
-        text: '@X-GOVUK'
+        text: '© X-GOVUK'
       }
     }
   })
