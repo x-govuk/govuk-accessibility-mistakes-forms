@@ -1,8 +1,4 @@
-# Folders to ignore
-
-node_modules
 node_modules/
-npm-debug.log
 _site
-_site/
+npm-debug.log
 .DS_Store

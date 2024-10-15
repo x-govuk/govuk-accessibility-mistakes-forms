@@ -1,97 +1,65 @@
----
-layout: example-partial.njk
-eleventyExcludeFromCollections: true
-title: Name
----
-
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Original version</span>
 
+  <h1 class="govuk-heading-l">
+    Log in
+  </h1>
 
-  {{ govukNotificationBanner({
-    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
-    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
-  }) if reviewed and reviewAgain }}
+  {{ govukInput({
+    formGroup: {
+      classes: "govuk-!-margin-bottom-2"
+    },
+    label: {
+      text: "User ID"
+    },
+    hint: {
+      text: "This is 11 digits long and starts with an 11, 21, 31 or 41. You will find it on any letters or emails from us."
+    },
+    classes: "govuk-!-width-one-half",
+    id: "username",
+    name: "username",
+    autocomplete: "username",
+    spellcheck: false
+  }) }}
 
+  <p class="govuk-body">
+    <a class="govuk-link" href="#">I have forgotten my user ID</a>
+  </p>
 
+  {{ govukInput({
+    label: {
+      text: "Surname"
+    },
+    hint: {
+      text: "This must be the name registered to the account"
+    },
+    classes: "govuk-!-width-one-half",
+    id: "surname",
+    name: "surname",
+    autocomplete: "family-name",
+    spellcheck: false
+  }) }}
 
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
-  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+  {{ govukPasswordInput({
+    formGroup: {
+      classes: "govuk-!-margin-bottom-2"
+    },
+    label: {
+      text: "Password"
+    },
+    classes: "govuk-!-width-one-half",
+    id: "password-input",
+    name: "password"
+  }) }}
 
+  <p class="govuk-body">
+    <a class="govuk-link" href="#">I have forgotten my password</a>
+  </p>
 
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-
-
-
-
-                  <h1 class="govuk-heading-l">
-                    Log in
-
-                  </h1>
-
-        <form class="form" action="#" method="post">
-
-
-
-          <div class="govuk-form-group">
-
-
-
-          {{ govukInput({
-            label: {
-              text: "User ID"
-            },
-            hint: {
-              text: "This is 11 digits long and starts with an 11, 21, 31 or 41. You will find it on any letters or emails from us."
-            },
-            id: "username",
-            name: "username",
-            classes: "govuk-!-width-one-half",
-            autocomplete: "username",
-            spellcheck: false
-          }) }}
-
-<p class="govuk-body"><a class="govuk-link" href="#">I have forgotten my user ID</a></p>
-
-          {{ govukInput({
-            label: {
-              text: "Surname"
-            },
-            hint: {
-              text: "This must be the name registered to the account"
-            },
-            id: "surname",
-            name: "surname",
-            classes: "govuk-!-width-one-half",
-            autocomplete: "family-name",
-            spellcheck: false
-          }) }}
-
-
-          {{ govukPasswordInput({
-            label: {
-              text: "Password"
-            },
-            classes: "govuk-!-width-one-half",
-            id: "password-input",
-            name: "password"
-          }) }}
-
-          <p class="govuk-body"><a class="govuk-link" href="#">I have forgotten my password</a></p>
-
-</div>
-
-
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-
-
-
-          </form>
-
-
-  {{ appProseScope(content) if content }}
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

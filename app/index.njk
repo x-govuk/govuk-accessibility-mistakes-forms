@@ -1,0 +1,37 @@
+---
+homepage: true
+includeInBreadcrumbs: true
+layout: product
+title: Learn how to fix common accessibility mistakes in government digital services
+description: Even when you design using the accessibility-focused GOV.UK Frontend (as documented in the GOV.UK Design System), how you implement the frontend can create accessibility issues.
+image:
+  src: /assets/homepage-illustration.svg
+---
+
+<div class="govuk-grid-row">
+  <section class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-8">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Design</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+{% for page in collections.design | sort(false, false, "data.title") %}
+      <li>
+        <a class="govuk-link" href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+{% endfor %}
+    </ul>
+  </section>
+  <section class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-8">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Code</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+{% for page in collections.code | sort(false, false, "data.title") %}
+      <li>
+        <a class="govuk-link" href="{{ page.url }}">{{ page.data.title }}</a>
+      </li>
+{% endfor %}
+    </ul>
+  </section>
+  <section class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+    <h2 class="govuk-heading-m">Contribute</h2>
+    <p class="govuk-body">The project is public and <a class="govuk-link govuk-link--no-visited-state" href="/contribute">we welcome contributions</a>.</p>
+  </section>
+</div>

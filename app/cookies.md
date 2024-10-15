@@ -6,5 +6,4 @@ includeInBreadcrumbs: true
 title: Cookies
 ---
 
-
-This website does not use any cookies or analyics trackers. 
+This website does not use any cookies or analyics trackers.

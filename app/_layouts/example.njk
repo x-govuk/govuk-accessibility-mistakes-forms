@@ -1,175 +1,20 @@
-{% extends "layouts/sub-navigation.njk" %}
-{% from "example/macro.njk" import example %}
+{% extends "govuk/template.njk" %}
 
-{% block beforeContent %}
-  {{ govukBreadcrumbs({
-    classes: "govuk-!-display-none-print",
-    items: breadcrumbItems
-  }) if showBreadcrumbs }}
+{% block head %}
+  <link rel="stylesheet" href="/assets/example.css">
 {% endblock %}
+
+{% block skipLink %}{% endblock %}
+
+{% block header %}{% endblock %}
 
 {% block content %}
-<!--
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-quarter-from-desktop">
-      {{ xGovukSubNavigation({
-        items: collections.ordered | eleventyNavigation(sectionKey or options.homeKey) | itemsFromNavigation(page.url, { pathPrefix: options.pathPrefix })
-      }) }}
-    </div>
-    <div class="govuk-grid-column-three-quarters-from-desktop">
-
-    {# overwrite appDocumentHeader #}
-    {#
-      {{ appDocumentHeader({
-        title: title | noOrphans,
-        description: description | noOrphans,
-        tags: tags
-      }) }}
-#}
--->
-
-<header class="app-document-header">
-  <h1 class="app-document-header__title govuk-heading-xl">
-    {{ title | smart | noOrphans }}
-    {%- if tags | length > 0 -%}
-    <br>
-        {%- for tag in tags %}
-        <span class="govuk-tag govuk-tag--grey">
-             {{tag}}
-           </span>
-          {%- if not loop.last %}  {% endif %}
-        {%- endfor -%}
-      {%- endif -%}
-  </h1>
-
-  {% if description %}
-    <p class="app-document-header__description govuk-body-l">
-      {{ description | markdown("inline") | noOrphans }}
-    </p>
-  {% endif %}
-{% if wcag %}
-
-
-
-  <div class="govuk-inset-text">
-
-    <p class="govuk-body">This mistake can mean a failure of
-
-      {% for i in wcag %}
-    <a class="govuk-link" href="{{i.link}}">{{ i.text}}</a>
-
-{% endfor %}
-    </p>
-  </div>
-  {% endif %}
-
-
-
-
-{#
-  {% if date or modified or authors or author or tags %}
-    <p class="app-document-header__metadata">
-      {%- if authors -%}
-        <span class="govuk-visually-hidden">Posted by</span>
-        {%- for author in authors -%}
-          {{- " and " if loop.last else (", " if not loop.first) -}}
-          {{- _authorLink(author) -}}
-        {%- endfor -%}
-        <span aria-hidden="true">&ensp;•&ensp;</span>
-      {%- elif author -%}
-        {{- _authorLink(author) -}}
-        <span aria-hidden="true">&ensp;•&ensp;</span>
-      {%- endif -%}
-      {%- if date -%}
-        <span class="govuk-visually-hidden">Posted on </span><time datetime="{{ date | date }}">{{ date | date("d LLLL y") }}</time>
-      {%- endif -%}
-      {%- if modified -%}
-        <span aria-hidden="true">&ensp;•&ensp;</span>Last updated <time datetime="{{ modified | date }}">{{ modified | date("d LLLL y") }}</time>
-      {%- endif -%}
-      {%- if tags | length > 0 -%}
-        <span aria-hidden="true">&ensp;•&ensp;</span>Tags:
-        {%- for tag in tags %}
-          <a href="/tags/{{ tag | slug }}" class="govuk-link">{{ tag }}</a>
-          {%- if not loop.last %}, {% endif %}
-        {%- endfor -%}
-      {%- endif -%}
-    </p>
-  {% endif %}
-
-#}
-</header>
-
-<div class="app-prose-scope">
-
-<ol class="govuk-list govuk-list--number">
-<li><a href="#typical-example" class="govuk-link">Typical example{%- if mistake | length > 1 -%}s{% endif %} that cause{%- if mistake | length == 1 -%}s{% endif %} barriers</a></li>
-<li><a href="#improved-version" class="govuk-link">Improved version{%- if improvement | length > 1 -%}s{% endif %}</a></li>
-<li><a href="#links" class="govuk-link">Links</a></li>
-</ol>
-
-
-{% for i in mistake %}
-
-{% if loop.index0 == 0 %}
-<h2 id="typical-example" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#typical-example"><span>Typical example{% if loop.length > 1%}s{% endif %} that cause{% if loop.length == 1%}s{% endif %} barriers </span></a></h2>
-{% endif %}
-
-{% if loop.length > 1%}<h3 id="example-{{loop.index}}" class="govuk-heading-m">Example {{loop.index}}</h3>{% endif %}
-
-{% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
-
-
-{{ example(i.link) }}
-
-
-<p class="govuk-body">{{i.reason}}</p>
-{% endfor %}
-
-
-<h2 id="improved-version" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#improved-version"><span>Improved version{%- if improvement | length > 1 -%}s{% endif %}</span></a></h2>
-
-
-{% for i in improvement %}
-
-{% if loop.length > 1%}<h3 id="example-{{loop.index}}" class="govuk-heading-m">Improvement {{loop.index}}</h3>{% endif %}
-{% if i.description %}<p class="govuk-body">{{i.description}}</p>{% endif %}
-
-{{ example(i.link) }}
-
-<p class="govuk-body">{{i.reason}}</p>
-{% endfor %}
-
-
-
-
-{% if links %}
-
-<h2 id="links" class="govuk-heading-l"><a class="app-link--heading govuk-link" href="#links"><span>Links</span></a></h2>
-
-<ul class="govuk-list govuk-list--bullet">
-
-
-{% for link in links %}
-<li><a href="{{link.href}}" class="govuk-link">{{link.text}}</a></li>
-
-{% endfor %}
-</ul>
-{% else %}
-<p class='govuk-body'>No links given.</p>
-{% endif %}
-</div>
-
-      {{ appProseScope(content) if content }}
-
-      {% include "layouts/shared/related.njk" %}
-    </div>
-  </div>
+  {{ content }}
 {% endblock %}
 
-
-{% block scripts %}
-  <script src="/assets/iframeResizer.js"></script>
-  <script>
-    iFrameResize({}, `[data-module="app-example-frame"]`)
-  </script>
+{% block bodyEnd %}
+  <script src="/assets/iframeResizer.contentWindow.js"></script>
+  <script src="/assets/govuk.js" type="module"></script>
 {% endblock %}
+
+{% block footer %}{% endblock %}
