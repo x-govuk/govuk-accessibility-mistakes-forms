@@ -1,43 +1,37 @@
----
-layout: example-partial.njk
-title: Examples of incorrect label formatting
-eleventyExcludeFromCollections: true
----
-
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  name: "signIn",
-  fieldset: {
-    legend: {
-      text: "How do you want to sign in?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "You’ll need an account to prove your identity and complete your Self Assessment and not filed a tax return online before</a>."
-  },
-  items: [
-    {
-      value: "government-gateway",
-      text: "Sign in with Government Gateway",
-      hint: {
-        html: "You’ll have a user ID if you’ve registered for Self Assessment or <a class='govuk-link' href='#'>filed a tax return online before</a>."
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  {{ govukRadios({
+    fieldset: {
+      legend: {
+        classes: "govuk-fieldset__legend--l",
+        text: "How do you want to sign in?",
+        isPageHeading: true
       }
     },
-    {
-      value: "govuk-one-login",
-      text: "Sign in with GOV.UK One Login",
-      hint: {
-        text: "If you don’t have a GOV.UK One Login, you can create one."
+    hint: {
+      text: "You’ll need an account to prove your identity and complete your Self Assessment and not filed a tax return online before</a>."
+    },
+    name: "signIn",
+    items: [
+      {
+        value: "government-gateway",
+        text: "Sign in with Government Gateway",
+        hint: {
+          html: 'You’ll have a user ID if you’ve registered for Self Assessment or <a class="govuk-link" href="#">filed a tax return online before</a>.'
+        }
+      },
+      {
+        value: "govuk-one-login",
+        text: "Sign in with GOV.UK One Login",
+        hint: {
+          text: "If you don’t have a GOV.UK One Login, you can create one."
+        }
       }
-    }
-  ]
-}) }}
+    ]
+  }) }}
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-              </form>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

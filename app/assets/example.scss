@@ -1,0 +1,39 @@
+$govuk-canvas-background-colour: transparent;
+
+// GOV.UK Frontend
+@import "govuk-frontend/dist/govuk/all";
+
+// GOV.UK Prototype components
+@import "@x-govuk/govuk-prototype-components/x-govuk/all";
+
+// Simulate GOV.UK Element for outdated link styles
+.govuk-elements {
+  .govuk-link {
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+
+    &:link,
+    &:active {
+      color: #005ea5;
+    }
+
+    &:visited {
+      color: #4c2c92;
+    }
+
+    &:hover {
+      color: #2b8cc4;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+    }
+
+    &:focus {
+      background-color: #ffbf47;
+      color: #005ea5;
+      outline: 3px solid #ffbf47 !important;
+      box-shadow:
+        0 0 transparent,
+        0 0 transparent;
+    }
+  }
+}

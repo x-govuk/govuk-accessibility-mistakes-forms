@@ -1,0 +1,31 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <div class="govuk-form-group">
+    <span class="govuk-caption-l">Original version</span>
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="example">
+      What is your Self Assessment Unique Taxpayer Reference (UTR)?
+      </label>
+    </h1>
+
+    <p class="govuk-body">
+      Your UTR can be 10 or 13 digits long. You can find it.
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>in your Personal Tax Account</li>
+      <li>the HMRC app</li>
+      <li>on tax returns and other documents from HMRC</li>
+    </ul>
+
+    <p class="govuk-body">
+      It might be called ‘reference’, ‘UTR’ or ‘official use’. <a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://www.gov.uk/find-utr-number">Get more help to find your UTR (opens in new tab)</a>
+    </p>
+
+    <input class="govuk-input" id="example" name="example" type="text" aria-describedby="example-hint">
+  </div>
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

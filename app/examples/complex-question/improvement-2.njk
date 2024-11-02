@@ -1,0 +1,48 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Improved version</span>
+
+  <h1 class="govuk-heading-l">
+    5 addresses found
+  </h1>
+
+  <p class="govuk-body">
+    Search results for NE1 1LE.
+    <a class="govuk-link" href="#">Search again</a>.
+  </p>
+
+  {{ govukRadios({
+    fieldset: {
+      legend: {
+        classes: "govuk-fieldset__legend--m",
+        text: "Choose address"
+      }
+    },
+    name: "address",
+    items: [{
+      text: "1 Chancery Lane",
+      value: "address-1"
+    }, {
+      text: "2 Chancery Lane",
+      value: "address-2"
+    }, {
+      text: "3 Chancery Lane",
+      value: "address-3"
+    }, {
+      text: "4 Chancery Lane",
+      value: "address-4"
+    }, {
+      text: "5 Chancery Lane",
+      value: "address-5"
+    }]
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  <p class="govuk-body">
+    <a class="govuk-link" href="#">Enter address manually</a>
+  </p>
+</form>

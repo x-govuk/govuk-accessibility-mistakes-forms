@@ -1,57 +1,40 @@
----
-layout: example-partial.njk
-title: Examples of incorrect label formatting
-eleventyExcludeFromCollections: true
----
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Original version</span>
 
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-
-
-        <h1 class="govuk-heading-l">
+  <h1 class="govuk-heading-l">
     Your name
+  </h1>
 
-              </h1>
-        <form class="form" action="#" method="post">
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+  {{ govukInput({
+    label: {
+      text: "First name or names"
+    },
+    hint: {
+      text: "This must be your legal first name or names"
+    },
+    id: "first-name",
+    name: "firstName"
+  }) }}
 
+  {{ govukInput({
+    label: {
+      text: "Middle name or names (if you have them)"
+    },
+    id: "middle-names",
+    name: "middleName"
+  }) }}
 
-        {{ govukInput({
-          label: {
-            text: "First name or names"
-          },
-          hint: {
-            text: "This must be your legal first name or names"
-          },
-          classes: "govuk-!-width-one-third",
-          id: "first-name",
-          name: "firstName"
-        }) }}
+  {{ govukInput({
+    label: {
+      text: "Family name or names"
+    },
+    id: "lastName",
+    name: "lastName"
+  }) }}
 
-
-        {{ govukInput({
-          label: {
-            text: "Middle name or names (if you have them)"
-          },
-          classes: "govuk-!-width-one-third",
-          id: "middle-names",
-          name: "middleName"
-        }) }}
-
-        {{ govukInput({
-          label: {
-            text: "Family name or names"
-          },
-          classes: "govuk-!-width-one-third",
-          id: "lastName",
-          name: "lastName"
-        }) }}
-
-
-
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-              </form>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

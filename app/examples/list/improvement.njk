@@ -1,0 +1,62 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+<span class="govuk-caption-l">Improved version</span>
+
+<h1 class="govuk-heading-l">
+  Check previous details
+</h1>
+
+{{ govukSummaryList({
+  rows: [{
+    key: {
+      text: "Name"
+    },
+    value: {
+      text: "Sarah Philips"
+    }
+  }, {
+    key: {
+      text: "Date of birth"
+    },
+    value: {
+      text: "5 January 1978"
+    }
+  }, {
+    key: {
+      text: "Address"
+    },
+    value: {
+      html: "72 Guild Street<br>London<br>SE23 6FH"
+    }
+  }, {
+    key: {
+      text: "Contact details"
+    },
+    value: {
+      html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+    }
+  }]
+}) }}
+
+{{ govukRadios({
+  fieldset: {
+    legend: {
+      classes: "govuk-fieldset__legend--m",
+      text: "Are these details correct?"
+    }
+  },
+  name: "details",
+  items: [
+    {
+      text: "Yes"
+    },
+    {
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}

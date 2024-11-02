@@ -1,45 +1,43 @@
----
-layout: example-partial.njk
-title: Examples of complex information
-eleventyExcludeFromCollections: true
----
+{% from "govuk/components/button/macro.njk" import govukButton %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Original version</span>
 
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
+  <h1 class="govuk-heading-l">
+    Can you apply?
+  </h1>
 
+  <p class="govuk-body">
+    You can only apply if you are:
+  </p>
 
-        <h1 class="govuk-heading-l">
-      Can you apply?
+  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>
+      constructing, altering, repairing, extending, demolishing or dismantling
+      buildings or structures (whether permanent or not), including offshore
+      installation services
+    </li>
+    <li>
+      constructing, altering, repairing, extending, demolishing of any works
+      forming, or planned to form, part of the land, including (in particular)
+      walls, roadworks, power lines, electronic communications equipment,
+      aircraft runways, railways, inland waterways, docks and harbours
+    </li>
+    <li>
+      pipelines, reservoirs, water mains, wells, sewers, industrial plant and
+      installations for purposes of land drainage, coast protection or defence
+    </li>
+    <li>
+      installing heating, lighting, air-conditioning, ventilation, power
+      supply, drainage, sanitation, water supply or fire protection systems in
+      any building or structure
+    </li>
+  </ul>
 
-              </h1>
-        <form class="form" action="/content/original-explanation" method="post">
+  <p class="govuk-body">
+    If you are not eligible you can <a class="govuk-link" href="#">return to GOV.UK</a>.
+  </p>
 
-
-<p class="govuk-body">
-You can only apply if you are:
-</P>
-<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-  <li>
-    constructing, altering, repairing, extending, demolishing or dismantling buildings or structures (whether permanent or not), including offshore installation services
-  </li>
-  <li>
-    constructing, altering, repairing, extending, demolishing of any works forming, or planned to form, part of the land, including (in particular) walls, roadworks, power lines, electronic communications equipment, aircraft runways, railways, inland waterways, docks and harbours
-  </li>
-  <li>
-    pipelines, reservoirs, water mains, wells, sewers, industrial plant and installations for purposes of land drainage, coast protection or defence
-  </li>
-  <li>
-    installing heating, lighting, air-conditioning, ventilation, power supply, drainage, sanitation, water supply or fire protection systems in any building or structure
-</ul>
-
-
-<p class="govuk-body">
-If you are not eligible you can <a class="govuk-link" href="#">return to GOV.UK</a>.
-</P>
-
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-              </form>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>

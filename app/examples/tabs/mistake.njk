@@ -1,87 +1,32 @@
----
-layout: example-partial.njk
-title: Bank details
-eleventyExcludeFromCollections: true
----
-  {{ govukNotificationBanner({
-    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
-    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
-  }) if reviewed and reviewAgain }}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+<span class="govuk-caption-l">Original version</span>
 
+<h1 class="govuk-heading-l">
+  Bank details
+</h1>
 
-
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-        <h1 class="govuk-heading-xl">
-          Bank details
-        </h1>
-
-        <div class="govuk-tabs" data-module="govuk-tabs">
-          <h2 class="govuk-tabs__title">
-            Contents
-          </h2>
-
-          <ul class="govuk-tabs__list" role="tablist">
-
-                  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
-              <a class="govuk-tabs__tab" href="#past-week" id="tab_past-week" role="tab" aria-controls="past-week" aria-selected="true" tabindex="0">
-                Current account
-              </a>
-            </li>
-
-
-                  <li class="govuk-tabs__list-item" role="presentation">
-              <a class="govuk-tabs__tab" href="#past-month" id="tab_past-month" role="tab" aria-controls="past-month" aria-selected="false" tabindex="-1">
-                Savings account
-              </a>
-            </li>
-
-
-                  <li class="govuk-tabs__list-item" role="presentation">
-              <a class="govuk-tabs__tab" href="#past-year" id="tab_past-year" role="tab" aria-controls="past-year" aria-selected="false" tabindex="-1">
-                Credit card
-              </a>
-            </li>
-
-
-          </ul>
-
-              <div class="govuk-tabs__panel" id="past-week" role="tabpanel" aria-labelledby="tab_past-week">
-
-            <h2 class="govuk-heading-m">Current account balance</h2>
-            <p>Your balance is £1,929.32</p>
-            <p>Last updated 1 January 2025.</p>
-
-          </div>
-
-
-              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month" role="tabpanel" aria-labelledby="tab_past-month">
-
-            <h2 class="govuk-heading-m">Savings account balance</h2>
-
-            <p>Your balance is £532.43</p>
-            <p>Last updated 1 January 2025.</p>
-            <p>This account has a 5% AER interest rate</p>
-
-          </div>
-
-
-              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year" role="tabpanel" aria-labelledby="tab_past-year">
-
-            <h2 class="govuk-heading-m">Credit card balance</h2>
-
-
-            <p>Your balance is -£231.99</p>
-            <p>Last updated 1 January 2025.</p>
-            <p>This account has a 9% AER interest rate</p>
-
-          </div>
-
-
-
-        </div>
-
-
-
-  {{ appProseScope(content) if content }}
+{{ govukTabs({
+  items: [
+    {
+      label: "Current account",
+      id: "current-account",
+      panel: {
+        html: '<h2 class="govuk-heading-m">Current account balance</h2><p class="govuk-body">Your balance is £1,929.32</p><p class="govuk-body">Last updated 1 January 2025</p>'
+      }
+    },
+    {
+      label: "Savings account",
+      id: "savings-account",
+      panel: {
+        html: '<h2 class="govuk-heading-m">Savings account balance</h2><p class="govuk-body">Your balance is £532.43</p><p class="govuk-body">Last updated 1 January 2025</p><p class="govuk-body">This account has a 5% AER interest rate</p>'
+      }
+    },
+    {
+      label: "Credit card",
+      id: "credit-card",
+      panel: {
+        html: '<h2 class="govuk-heading-m">Current account balance</h2><p class="govuk-body">Your balance is -£231.99</p><p class="govuk-body">Last updated 1 January 2025</p><p class="govuk-body">This account has a 9% AER interest rate</p>'
+      }
+    }
+  ]
+}) }}

@@ -1,91 +1,42 @@
----
-layout: example-partial.njk
-eleventyExcludeFromCollections: true
-title: Name
----
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+<form class="govuk-!-width-two-thirds" action="#" method="post">
+  <span class="govuk-caption-l">Original version</span>
 
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-  {{ govukNotificationBanner({
-    text: "This page was last reviewed on " + (reviewed | date("d LLLL y")) + ".
-    It needs to be reviewed again on " + (reviewAgain | date("d LLLL y")) + "."
-  }) if reviewed and reviewAgain }}
+  <h1 class="govuk-heading-l">
+    Select an address
+  </h1>
 
+  <p class="govuk-body">
+    5 Addresses found for NE1 1LE.
+    <a class="govuk-link" href="#">Search again</a>.
+  </p>
 
+  {{ govukRadios({
+    name: "address",
+    items: [{
+      text: "1 Chancery Lane",
+      value: "address-1"
+    }, {
+      text: "2 Chancery Lane",
+      value: "address-2"
+    }, {
+      text: "3 Chancery Lane",
+      value: "address-3"
+    }, {
+      text: "4 Chancery Lane",
+      value: "address-4"
+    }, {
+      text: "5 Chancery Lane",
+      value: "address-5"
+    }]
+  }) }}
 
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
-  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+  {{ govukButton({
+    text: "Continue"
+  }) }}
 
-
-  <span class="govuk-caption-xl">
-          Original version
-        </span>
-
-
-
-        <form class="form" action="#" method="post">
-
-
-
-
-
-
-          <h1 class="govuk-heading-l">
-            Select an address
-          </h1>
-    <p class="govuk-body">5 Addresses found for NE1 1LE. <a class="govuk-link" href="#">Search again</a>.</p>
-
-
-
-
-
-
-
-    <div class="govuk-form-group">
-
-      <fieldset class="govuk-fieldset">
-
-
-        <div class="govuk-radios" data-module="govuk-radios">
-
-
-
-
-
-
-{% for i in range(1, 6) -%}
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="address-{{i}}" name="address" type="radio" value="{{i}} Chancery lane">
-            <label class="govuk-label govuk-radios__label" for="higher-further-education">
-            {{i}} Chancery Lane
-            </label>
-
-          </div>
-
-
-{% endfor %}
-
-
-
-
-
-
-        </div>
-
-      </fieldset>
-
-    </div>
-
-
-
-
-
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
-
-    <p class="govuk-body"><a class="govuk-link" href="#">Enter address manually</a></p>
-
-          </form>
-
-
-  {{ appProseScope(content) if content }}
+  <p class="govuk-body">
+    <a class="govuk-link" href="#">Enter address manually</a>
+  </p>
+</form>
