@@ -34,13 +34,7 @@
     "rimraf": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.55.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-n": "^16.4.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-promise": "^6.1.0",
+    "@x-govuk/eslint-config": "^0.0.1",
     "prettier": "^3.1.0",
     "stylelint": "^16.0.0",
     "stylelint-config-gds": "^2.0.0",
