@@ -29,11 +29,12 @@ $govuk-canvas-background-colour: transparent;
 
     &:focus {
       background-color: #ffbf47;
-      color: #005ea5;
-      outline: 3px solid #ffbf47 !important;
       box-shadow:
         0 0 transparent,
         0 0 transparent;
+      color: #005ea5;
+      // stylelint-disable-next-line declaration-no-important
+      outline: 3px solid #ffbf47 !important;
     }
   }
 }
