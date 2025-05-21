@@ -1,36 +1,50 @@
-import govukEleventyPlugin from '@x-govuk/govuk-eleventy-plugin'
+import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
 import { getHtmlCode, getNunjucksCode } from './lib/nunjucks.js'
+
+const serviceName = 'Fix Common Accessibility Mistakes'
 
 export default function (eleventyConfig) {
   // Register the plugin
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     icons: {
-      mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',
+      mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-mask.svg?raw=true',
       shortcut:
-        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-favicon.ico',
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/favicon.ico',
       touch:
-        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-180.png'
     },
     opengraphImageUrl:
       'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/assets/opengraph-image.png',
-    homeKey: 'Fix Common Accessibility Mistakes',
-    titleSuffix: 'Fix Common Accessibility Mistakes',
-    parentSite: {
-      url: 'https://x-govuk.github.io/#projects',
-      name: 'All X-GOVUK projects'
-    },
+    themeColor: '#2288aa',
+    titleSuffix: serviceName,
+    homeKey: serviceName,
+    showBreadcrumbs: false,
+    headingPermalinks: true,
     url:
       process.env.GITHUB_ACTIONS &&
       'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/',
-    headingPermalinks: true,
+    stylesheets: ['/assets/application.css'],
     header: {
-      logotype: 'x-govuk',
-      productName: 'Fix Common Accessibility Mistakes',
+      homepageUrl: 'https://x-govuk.github.io'
+    },
+    serviceNavigation: {
+      serviceName,
+      serviceUrl: process.env.GITHUB_ACTIONS ? '/govuk-eleventy-plugin/' : '/',
+      navigation: [
+        {
+          text: 'Design',
+          href: '/design'
+        },
+        {
+          text: 'Code implementation',
+          href: '/code'
+        }
+      ],
       search: {
+        label: 'Search examples',
         indexPath: '/search.json',
-        sitemapPath: '/sitemap',
-        label: 'Search examples'
+        sitemapPath: '/sitemap'
       }
     },
     footer: {
@@ -57,7 +71,8 @@ export default function (eleventyConfig) {
       copyright: {
         text: '© X-GOVUK'
       }
-    }
+    },
+    rebrand: true
   })
 
   // Globals
@@ -69,6 +84,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './node_modules/iframe-resizer/js/*.js': './assets'
   })
+
+  // Enable X-GOVUK brand
+  eleventyConfig.addNunjucksGlobal('xGovuk', true)
 
   // Filters
   return {
