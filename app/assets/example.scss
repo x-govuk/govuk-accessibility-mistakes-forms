@@ -1,10 +1,10 @@
-$govuk-canvas-background-colour: transparent;
-
 // GOV.UK Frontend
-@import "govuk-frontend/dist/govuk/all";
+@use "pkg:govuk-frontend/dist/govuk/base" with (
+  $govuk-template-background-colour: transparent
+);
 
 // GOV.UK Prototype components
-@import "@x-govuk/govuk-prototype-components/x-govuk/all";
+@use "pkg:@x-govuk/govuk-prototype-components/src/x-govuk";
 
 // Simulate GOV.UK Element for outdated link styles
 .govuk-elements {
