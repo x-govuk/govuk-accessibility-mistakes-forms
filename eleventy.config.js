@@ -71,8 +71,7 @@ export default function (eleventyConfig) {
       copyright: {
         text: '© X-GOVUK'
       }
-    },
-    rebrand: true
+    }
   })
 
   // Globals
