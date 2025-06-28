@@ -30,7 +30,9 @@ export default function (eleventyConfig) {
     },
     serviceNavigation: {
       serviceName,
-      serviceUrl: process.env.GITHUB_ACTIONS ? '/govuk-eleventy-plugin/' : '/',
+      serviceUrl: process.env.GITHUB_ACTIONS
+        ? '/govuk-accessibility-mistakes-forms/'
+        : '/',
       navigation: [
         {
           text: 'Design',
