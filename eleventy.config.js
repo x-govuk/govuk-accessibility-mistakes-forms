@@ -7,48 +7,6 @@ const serviceName = 'Fix Common Accessibility Mistakes'
 export default function (eleventyConfig) {
   // Register the plugin
   eleventyConfig.addPlugin(govukEleventyPlugin, {
-    icons: {
-      mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-mask.svg?raw=true',
-      shortcut:
-        'https://raw.githubusercontent.com/x-govuk/logo/main/images/favicon.ico',
-      touch:
-        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-180.png'
-    },
-    opengraphImageUrl:
-      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/assets/opengraph-image.png',
-    themeColor: '#2288aa',
-    titleSuffix: serviceName,
-    homeKey: serviceName,
-    showBreadcrumbs: false,
-    headingPermalinks: true,
-    url:
-      process.env.GITHUB_ACTIONS &&
-      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/',
-    stylesheets: ['/assets/application.css'],
-    header: {
-      homepageUrl: 'https://x-govuk.github.io'
-    },
-    serviceNavigation: {
-      serviceName,
-      serviceUrl: process.env.GITHUB_ACTIONS
-        ? '/govuk-accessibility-mistakes-forms/'
-        : '/',
-      navigation: [
-        {
-          text: 'Design',
-          href: '/design'
-        },
-        {
-          text: 'Code implementation',
-          href: '/code'
-        }
-      ],
-      search: {
-        label: 'Search examples',
-        indexPath: '/search.json',
-        sitemapPath: '/sitemap'
-      }
-    },
     footer: {
       meta: {
         items: [
@@ -73,7 +31,49 @@ export default function (eleventyConfig) {
       copyright: {
         text: '© X-GOVUK'
       }
-    }
+    },
+    icons: {
+      mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-mask.svg?raw=true',
+      shortcut:
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/favicon.ico',
+      touch:
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-180.png'
+    },
+    opengraphImageUrl:
+      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/assets/opengraph-image.png',
+    header: {
+      homepageUrl: 'https://x-govuk.github.io'
+    },
+    headingPermalinks: true,
+    homeKey: serviceName,
+    serviceNavigation: {
+      serviceName,
+      serviceUrl: process.env.GITHUB_ACTIONS
+        ? '/govuk-accessibility-mistakes-forms/'
+        : '/',
+      navigation: [
+        {
+          text: 'Design',
+          href: '/design'
+        },
+        {
+          text: 'Code implementation',
+          href: '/code'
+        }
+      ],
+      search: {
+        label: 'Search examples',
+        indexPath: '/search.json',
+        sitemapPath: '/sitemap'
+      }
+    },
+    showBreadcrumbs: false,
+    stylesheets: ['/assets/application.css'],
+    themeColor: '#2288aa',
+    titleSuffix: serviceName,
+    url:
+      process.env.GITHUB_ACTIONS &&
+      'https://x-govuk.github.io/govuk-accessibility-mistakes-forms/'
   })
 
   // Globals
