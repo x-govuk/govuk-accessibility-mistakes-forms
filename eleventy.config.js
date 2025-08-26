@@ -63,7 +63,7 @@ export default function (eleventyConfig) {
       ],
       search: {
         label: 'Search examples',
-        indexPath: '/search.json',
+        indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
       }
     },
