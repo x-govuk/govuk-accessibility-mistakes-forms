@@ -67,6 +67,9 @@ export default function (eleventyConfig) {
     },
     showBreadcrumbs: false,
     stylesheets: ['/assets/application.css'],
+    templates: {
+      searchIndex: true
+    },
     themeColor: '#2288aa',
     titleSuffix: serviceName
   })
