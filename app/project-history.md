@@ -18,7 +18,7 @@ Caroline Jarrett became actively involved in the project.
 
 ## August 2024
 
-Project switched from the GOV.UK Prototype Kit to the [GOV.UK Eleventy Plugin](https://x-govuk.github.io/govuk-eleventy-plugin/get-started/) so that it can be hosted on free flat-content sites such as Github pages.
+Project switched from the GOV.UK Prototype Kit to the [GOV.UK Eleventy Plugin](https://x-govuk.org/govuk-eleventy-plugin/get-started/) so that it can be hosted on free flat-content sites such as Github pages.
 
 ## September 2024
 
