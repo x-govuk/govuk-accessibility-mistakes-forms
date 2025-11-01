@@ -1,14 +1,14 @@
 {
-  "name": "govuk-fix-accessibility-mistakes",
+  "name": "fix-common-accessibility-mistakes",
   "version": "1.0.0",
   "description": "This is a project to show common mistakes and improvements for forms and other interactions designed using GOV.UK Frontend.",
   "keywords": [
     "govuk",
     "accessibility"
   ],
-  "homepage": "https://x-govuk.org/govuk-accessibility-mistakes-forms/",
+  "homepage": "https://fix-common-accessibility-mistakes.x-govuk.org",
   "bugs": {
-    "url": "https://github.com/x-govuk/govuk-accessibility-mistakes-forms/issues"
+    "url": "https://github.com/x-govuk/fix-common-accessibility-mistakes/issues"
   },
   "license": "MIT",
   "main": "eleventy.config.js",

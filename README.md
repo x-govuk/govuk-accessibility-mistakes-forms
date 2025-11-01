@@ -2,7 +2,7 @@
 
 This is a project to show common mistakes and improvements for forms and other interactions designed using GOV.UK Frontend.
 
-<http://x-govuk.org/govuk-accessibility-mistakes-forms>
+<https://fix-common-accessibility-mistakes.x-govuk.org>
 
 ## Contribute
 
